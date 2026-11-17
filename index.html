@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEAS — Núcleo de Estudos Ambientais da Uniso</title>
+<meta name="description" content="Laboratórios, viveiro, museu e mata: o Núcleo de Estudos Ambientais da Uniso, em Sorocaba, desde 1993.">
+<meta property="og:title" content="NEAS — Núcleo de Estudos Ambientais da Uniso">
+<meta property="og:description" content="Laboratórios, viveiro, museu e mata: o Núcleo de Estudos Ambientais da Uniso, em Sorocaba, desde 1993.">
+<meta property="og:image" content="img/arvore-grande-clone.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20160%22%3E%3Cpath%20d%3D%22M44.6%20118%20Q57%20114%2069.4%20118%20L82%20142%20Q86%20151%2076%20151%20H38%20Q28%20151%2032%20142%20Z%22%20fill%3D%22%231F4FB5%22/%3E%3Cpath%20d%3D%22M53%2080%20V102%20L32%20142%20Q28%20151%2038%20151%20H76%20Q86%20151%2082%20142%20L61%20102%20V80%22%20fill%3D%22none%22%20stroke%3D%22%23161616%22%20stroke-width%3D%228%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M57%2080%20C57%2062%2056%2046%2060%2032%22%20fill%3D%22none%22%20stroke%3D%22%232E8B3E%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M57.5%2060%20C45%2062%2031%2056%2024%2043%20C38%2039%2051%2045%2057.5%2060%20Z%22%20fill%3D%22%232E8B3E%22/%3E%3Cpath%20d%3D%22M60%2033%20C53%2026%2052%2015%2058%206%20C65%2014%2066%2025%2060%2033%20Z%22%20fill%3D%22%231E5E2B%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600..800&amp;family=Hanken+Grotesk:wght@400..700&amp;family=Chivo+Mono:wght@400..500&amp;family=Libre+Caslon+Text:wght@400&amp;family=Oswald:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+h1,h2{font-family:"Source Serif 4",serif;font-weight:700 !important;letter-spacing:-0.02em}
+h3{font-family:"Hanken Grotesk",sans-serif;font-weight:600 !important;letter-spacing:-0.005em}
+h2[style*="Chivo Mono"],p[style*="Chivo Mono"],span[style*="Chivo Mono"]{font-weight:400 !important}
+body{margin:0;background:#ECEBE6}
+@keyframes neasCai{0%{transform:translate(0,-40px) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translate(90px,520px) rotate(260deg);opacity:0}}
+@keyframes neasVoo{0%{transform:translate(-120px,0)}100%{transform:translate(1620px,-70px)}}
+@keyframes neasDeriva{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translate(-180px,-120px);opacity:0}}
+@keyframes neasFlutua{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-16px) rotate(3deg)}}
+@keyframes neasAsa{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.5)}}
+@keyframes neasPaira{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes neasNada{0%,100%{transform:translate(0,0) rotate(-1.5deg)}50%{transform:translate(-14px,6px) rotate(1.5deg)}}
+@keyframes neasSobe{0%{transform:translate(0,0);opacity:0}20%{opacity:.85}100%{transform:translate(24px,-140px);opacity:0}}
+@keyframes neasBrilho{0%,100%{opacity:.35}50%{opacity:.75}}
+[data-tr]{stroke-dasharray:1 1;stroke-dashoffset:1;transition:stroke-dashoffset 0s linear 0.8s}
+[data-on="1"] [data-tr]{stroke-dashoffset:0;transition:stroke-dashoffset 2s cubic-bezier(.45,0,.2,1) 0.35s}
+@keyframes neasLetra{from{opacity:0;transform:translateY(0.18em)}to{opacity:1;transform:none}}
+@keyframes neasTraco{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes neasBrota{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes neasSurge{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes neasFoto{from{opacity:0}to{opacity:1}}
+@keyframes neasRespira{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+@media (max-width: 720px){
+[data-h="hero"]{height:640px !important}
+[data-h="txt"]{top:11% !important}
+[data-h="tit"]{font-size:clamp(52px,17vw,96px) !important}
+[data-h="dados"]{flex-direction:column !important;gap:2px !important;font-size:14px !important;margin-top:10px !important}
+[data-h="regua"]{display:none !important}
+[data-h="nw"]{white-space:normal !important}
+[data-h="med"]{width:175vw !important}
+[data-h="ilu"]{left:50% !important;height:40% !important;bottom:15% !important}
+[data-h="seta"]{display:none !important}
+[data-h="lista-d"]{display:none !important}
+[data-h="lista-m"]{display:flex !important}
+[data-h="palco"]{aspect-ratio:1 / 0.86 !important}
+[data-h="hero-grid"]{margin-top:24px !important}
+[data-h="hero-foto"]{flex:1 1 100% !important}
+[data-h="abertura"]{height:600px !important}
+[data-h="numeros"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:24px 16px !important;padding:36px 24px !important}
+[data-h="num-v"]{font-size:30px !important}
+[data-h="equipe"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:20px 14px !important}
+[data-h="mapa"]{min-height:240px !important}
+[data-h="sobre-img"]{height:280px !important}
+section > div[style*="padding: 96px 24px"]{padding-top:64px !important;padding-bottom:64px !important}
+[data-h="pt"]{width:34px !important}
+[data-h="cab-logo"]{order:-3}
+[data-h="cab-cta"]{order:-2;min-height:44px !important}
+[data-h="cab-logo"] ~ [data-h="cab-cta"]{display:none !important}
+[data-h="menu-btn"]{display:inline-flex !important;order:-1}
+[data-h="cab-nav"]{display:none !important}
+[data-menu="true"] [data-h="cab-nav"]{display:flex !important;order:1;flex:1 1 100% !important;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:0 0 8px !important;font-size:16px !important}
+[data-menu="true"] [data-h="cab-nav"] a{display:flex;align-items:center;min-height:48px;border-top:1px solid #4F6B57}
+[data-h="destaque-txt"]{padding:40px 8px !important}
+[data-h="destaque-img"],[data-h="destaque-img"] img{min-height:300px !important}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
+a{color:#1F4FB5}a:hover{color:#163A86}
+</style>
+</head>
+<body>
+<div id="neas-app">
+<div style="background: #ECEBE6; color: #1A1F1B; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 16px">
+
+<header style="background: #1E3B27; color: #F1EEE6">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 0 24px">
+<div data-menu="false" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 28px; min-height: 68px; border-bottom: 1px solid #4F6B57">
+<nav aria-label="Páginas do site" data-h="cab-nav" style="flex: 1 1 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 26px; padding: 14px 0; font-size: 14px">
+<a href="#topo" aria-current="page" style="color: #F1EEE6; text-decoration: none; font-weight: 600">Início</a>
+<a href="#sobre" style="color: #F1EEE6; text-decoration: none; font-weight: 400">O NEAS</a>
+<a href="#espacos" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Espaços</a>
+<a href="historia.html" style="color: #F1EEE6; text-decoration: none; font-weight: 400">História</a>
+<a href="arvore-grande.html" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Árvore Grande</a>
+<a href="#imprensa" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Imprensa</a>
+<a href="#equipe" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Equipe</a>
+</nav>
+<a href="#visite" data-h="cab-cta" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border: 1px solid #F1EEE6; border-radius: 20px; color: #F1EEE6; font-size: 14px; text-decoration: none; white-space: nowrap">agendar visita</a>
+<button type="button" data-h="menu-btn" aria-expanded="false" style="display: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #4F6B57; border-radius: 22px; background: transparent; color: #F1EEE6; font: inherit; font-size: 14px; cursor: pointer" data-neas-click="0">menu <span aria-hidden="true" style="font-size: 18px; line-height: 1">≡</span></button>
+</div>
+</div>
+</header>
+
+<section id="topo" aria-labelledby="titulo-abertura" data-h="abertura" style="position: relative; height: clamp(560px, 86vh, 860px); overflow: hidden; background: #10201A; color: #F4F1E8">
+<img src="img/viveiro-estufa.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: neasFoto 1.6s ease both">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,28,20,0.55) 0%, rgba(14,28,20,0.45) 45%, rgba(14,28,20,0.85) 100%)"></div>
+<div style="position: relative; height: 100%; max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 0 24px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; text-align: center">
+<h1 id="titulo-abertura" style="margin: 0; display: flex; align-items: flex-end; gap: clamp(8px, 1.2vw, 16px)">
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">NEAS, Núcleo de Estudos Ambientais da Uniso</span>
+<svg viewBox="0 0 120 160" aria-hidden="true" style="width: clamp(66px, 9vw, 120px); height: auto; overflow: visible">
+<path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#6F95E6" style="animation: neasSurge 0.8s ease 0.9s both"></path>
+<path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" pathLength="1" fill="none" stroke="#F4F1E8" stroke-width="5" stroke-linejoin="round" style="stroke-dasharray: 1; animation: neasTraco 1s ease 0.2s both"></path>
+<path d="M49 80 H65" pathLength="1" stroke="#F4F1E8" stroke-width="5" stroke-linecap="round" style="stroke-dasharray: 1; animation: neasTraco 0.4s ease 0.9s both"></path>
+<path d="M57 80 C57 62 56 46 60 32" pathLength="1" fill="none" stroke="#7BC07A" stroke-width="4.5" stroke-linecap="round" style="stroke-dasharray: 1; animation: neasTraco 0.7s ease 1.1s both"></path>
+<path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#7BC07A" style="transform-box: fill-box; transform-origin: 100% 100%; animation: neasBrota 0.6s cubic-bezier(.3,1.4,.5,1) 1.5s both"></path>
+<path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#A8D89A" style="transform-box: fill-box; transform-origin: 50% 100%; animation: neasBrota 0.6s cubic-bezier(.3,1.4,.5,1) 1.7s both"></path>
+<path d="M59.5 46 C68 41 78 36 96 33" pathLength="1" fill="none" stroke="#D9A93A" stroke-width="5" stroke-linecap="round" style="stroke-dasharray: 1; animation: neasTraco 0.6s ease 1.6s both"></path>
+</svg>
+<span aria-hidden="true" style="display: inline-flex; flex-direction: column; gap: clamp(6px, 0.9vw, 12px)">
+<span style="display: flex; justify-content: space-between; font-family: 'Libre Caslon Text', serif; font-weight: 400; font-size: clamp(58px, 8.4vw, 116px); line-height: 0.74; letter-spacing: 0">
+<span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.0s both">N</span><span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.2s both">E</span><span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.4s both">A</span><span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.6s both">S</span>
+</span>
+<span style="font-family: Oswald, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(12px, 1.75vw, 24px); letter-spacing: 0.05em; white-space: nowrap; animation: neasSurge 0.9s ease 2.0s both">NÚCLEO DE ESTUDOS AMBIENTAIS – UNISO</span>
+</span>
+</h1>
+<p style="margin: 0; max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: #E4EBE5; animation: neasSurge 0.9s ease 2.4s both">Há 33 anos estudando, recuperando e cuidando da natureza da região de Sorocaba.</p>
+<a href="#sobre" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border: 1px solid #F4F1E8; border-radius: 24px; color: #F4F1E8; font-size: 15px; text-decoration: none; animation: neasSurge 0.9s ease 2.6s both">conheça o NEAS <span aria-hidden="true">↓</span></a>
+</div>
+<p style="position: absolute; left: 24px; right: 24px; bottom: 16px; margin: 0; text-align: right; font-family: 'Chivo Mono', monospace; font-size: 11px; color: rgba(244,241,232,0.7)">Estufas do viveiro do NEAS · [crédito da foto]</p>
+</section>
+
+<section id="sobre" aria-labelledby="titulo-sobre">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">sobre o NEAS</p>
+<h2 id="titulo-sobre" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">O que é o <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #1A1F1B">O Núcleo de Estudos Ambientais é a parte da Uniso dedicada ao meio ambiente. Funciona desde 1993 numa área afastada dentro da Cidade Universitária, com laboratórios, viveiro de mudas, museu e muita mata.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3A413C">É ali que acontecem as aulas práticas de biologia, agronomia, engenharia ambiental e veterinária, e as pesquisas de iniciação científica, mestrado e doutorado. O núcleo nasceu junto com a universidade, ajudou a criar o Comitê de Bacias dos rios Sorocaba e Médio Tietê e transformou um antigo pasto em floresta.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3A413C">O núcleo fica um pouco afastado do resto da Cidade Universitária. Na entrada está o casarão, com três laboratórios e o biotério. Mais acima ficam a área de campo e didática, com o viveiro, o meliponário e o CEPAG, área experimental da agronomia, e o Museu da Biodiversidade. A ideia inicial era que tudo isso virasse um Jardim Botânico, e por isso há tantas espécies nativas espalhadas pelo terreno.</p>
+</div>
+<figure style="flex: 1 1 420px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 8px">
+<img src="img/arvore-grande-clone.jpg" alt="Clone da Árvore Grande florido à noite na Cidade Universitária" data-h="sobre-img" style="display: block; width: 100%; height: 460px; object-fit: cover">
+<figcaption style="font-size: 13px; color: #5A615C">Clone da Árvore Grande na Cidade Universitária. [crédito da foto]</figcaption>
+</figure>
+</div>
+</section>
+
+<section aria-label="O NEAS em números" style="background: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 48px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px" data-h="numeros">
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">1993</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Fundação do núcleo, entre os primeiros grupos de pesquisa da Uniso</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">+16 mil</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Mudas nativas plantadas no câmpus nos plantios de 2002 e 2009</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">7,8 ha</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Área reflorestada em parceria com a Fundação SOS Mata Atlântica</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">~50</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Espécies de mudas nativas nas estufas do viveiro</p>
+</div>
+</div>
+</section>
+
+<section id="espacos" aria-labelledby="titulo-espacos" style="background: #1E3B27; color: #F1EEE6">
+<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+<defs>
+<pattern id="eh" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><path d="M0 0 V4" stroke="#1E3B27" stroke-opacity="0.4" stroke-width="1.1"></path></pattern>
+<pattern id="ehx" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)"><path d="M0 0 V4" stroke="#1E3B27" stroke-opacity="0.32" stroke-width="1"></path></pattern>
+<pattern id="esc" width="12" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 A6 6 0 0 1 12 8 M-6 4 A6 6 0 0 1 6 4 M6 4 A6 6 0 0 1 18 4" fill="none" stroke="#1E3B27" stroke-opacity="0.3" stroke-width="0.9"></path></pattern>
+<pattern id="est" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="0.8" fill="#1E3B27" fill-opacity="0.4"></circle></pattern>
+<g id="pp"><path d="M0 0 C16 -20 18 -62 6 -96 C0 -102 -8 -98 -10 -92 C-20 -60 -16 -22 0 0 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path><path d="M0 0 C-12 -22 -16 -58 -9 -90 C-6 -60 -4 -30 0 0 Z" fill="url(#eh)"></path><path d="M3 -14 C7 -40 7 -64 2 -86" fill="none" stroke="#1E3B27" stroke-width="1"></path></g>
+<g id="lf"><path d="M0 0 C12 -18 14 -50 0 -74 C-14 -50 -12 -18 0 0 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.5"></path><path d="M0 0 C-12 -18 -14 -50 0 -74 Z" fill="url(#eh)"></path><path d="M0 -4 V-68" stroke="#1E3B27" stroke-width="1"></path></g>
+</defs>
+</svg>
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 80px 24px 80px">
+<div data-h="hero-grid" style="margin-top: 0; display: flex; flex-wrap: wrap; gap: 28px 64px; align-items: flex-start">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 id="titulo-espacos" data-h="hero-h1" style="margin: 0; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.04">Três laboratórios, um viveiro e um museu</h2>
+<p style="margin: 0; max-width: 460px; font-size: 16px; line-height: 1.6; color: #C9D6CB">Tudo isso fica dentro da Cidade Universitária da Uniso. Escolha um espaço para saber o que acontece lá.</p>
+<ol data-h="lista-d" style="margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-bottom: 1px solid #4F6B57">
+
+<li style="border-top: 1px solid #4F6B57">
+<button type="button" aria-pressed="true" style="width: 100%; display: grid; grid-template-columns: 36px minmax(0, 1fr) 20px; align-items: center; gap: 12px; padding: 14px 0; border: none; background: transparent; color: #F1EEE6; text-align: left; cursor: pointer; font: inherit" data-neas-click="1">
+<span style="font-family: 'Chivo Mono', monospace; font-size: 12px">01</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 19px; font-weight: 600; line-height: 1.2">Lapetox</span><span style="font-size: 13px; line-height: 1.35; opacity: 0.8">Laboratório de Pesquisas Toxicológicas</span></span>
+<span aria-hidden="true" style="opacity: 1">→</span>
+</button>
+</li>
+
+<li style="border-top: 1px solid #4F6B57">
+<button type="button" aria-pressed="false" style="width: 100%; display: grid; grid-template-columns: 36px minmax(0, 1fr) 20px; align-items: center; gap: 12px; padding: 14px 0; border: none; background: transparent; color: #93A698; text-align: left; cursor: pointer; font: inherit" data-neas-click="2">
+<span style="font-family: 'Chivo Mono', monospace; font-size: 12px">02</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 19px; font-weight: 600; line-height: 1.2">Laminfe</span><span style="font-size: 13px; line-height: 1.35; opacity: 0.8">Laboratório de Microbiologia Industrial e Processos Fermentativos</span></span>
+<span aria-hidden="true" style="opacity: 0">→</span>
+</button>
+</li>
+
+<li style="border-top: 1px solid #4F6B57">
+<button type="button" aria-pressed="false" style="width: 100%; display: grid; grid-template-columns: 36px minmax(0, 1fr) 20px; align-items: center; gap: 12px; padding: 14px 0; border: none; background: transparent; color: #93A698; text-align: left; cursor: pointer; font: inherit" data-neas-click="3">
+<span style="font-family: 'Chivo Mono', monospace; font-size: 12px">03</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 19px; font-weight: 600; line-height: 1.2">Ecologia Aplicada</span><span style="font-size: 13px; line-height: 1.35; opacity: 0.8">Laboratório de Ecologia Aplicada</span></span>
+<span aria-hidden="true" style="opacity: 0">→</span>
+</button>
+</li>
+
+<li style="border-top: 1px solid #4F6B57">
+<button type="button" aria-pressed="false" style="width: 100%; display: grid; grid-template-columns: 36px minmax(0, 1fr) 20px; align-items: center; gap: 12px; padding: 14px 0; border: none; background: transparent; color: #93A698; text-align: left; cursor: pointer; font: inherit" data-neas-click="4">
+<span style="font-family: 'Chivo Mono', monospace; font-size: 12px">04</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 19px; font-weight: 600; line-height: 1.2">Viveiro</span><span style="font-size: 13px; line-height: 1.35; opacity: 0.8">Viveiro de mudas nativas e Banco de Sementes</span></span>
+<span aria-hidden="true" style="opacity: 0">→</span>
+</button>
+</li>
+
+<li style="border-top: 1px solid #4F6B57">
+<button type="button" aria-pressed="false" style="width: 100%; display: grid; grid-template-columns: 36px minmax(0, 1fr) 20px; align-items: center; gap: 12px; padding: 14px 0; border: none; background: transparent; color: #93A698; text-align: left; cursor: pointer; font: inherit" data-neas-click="5">
+<span style="font-family: 'Chivo Mono', monospace; font-size: 12px">05</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 19px; font-weight: 600; line-height: 1.2">Museu</span><span style="font-size: 13px; line-height: 1.35; opacity: 0.8">Museu da Biodiversidade</span></span>
+<span aria-hidden="true" style="opacity: 0">→</span>
+</button>
+</li>
+
+</ol>
+</div>
+<div style="flex: 1.35 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div data-h="lista-m" role="group" aria-label="Espaços do NEAS" style="display: none; gap: 8px; overflow-x: auto; margin: 0 -24px; padding: 0 24px 4px; scroll-padding: 0 24px">
+
+<button type="button" aria-pressed="true" style="flex: none; min-height: 44px; padding: 0 16px; border: 1px solid #F1EEE6; border-radius: 22px; background: #F1EEE6; color: #1E3B27; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer" data-neas-click="6">Lapetox</button>
+
+<button type="button" aria-pressed="false" style="flex: none; min-height: 44px; padding: 0 16px; border: 1px solid #4F6B57; border-radius: 22px; background: transparent; color: #F1EEE6; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer" data-neas-click="7">Laminfe</button>
+
+<button type="button" aria-pressed="false" style="flex: none; min-height: 44px; padding: 0 16px; border: 1px solid #4F6B57; border-radius: 22px; background: transparent; color: #F1EEE6; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer" data-neas-click="8">Ecologia Aplicada</button>
+
+<button type="button" aria-pressed="false" style="flex: none; min-height: 44px; padding: 0 16px; border: 1px solid #4F6B57; border-radius: 22px; background: transparent; color: #F1EEE6; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer" data-neas-click="9">Viveiro</button>
+
+<button type="button" aria-pressed="false" style="flex: none; min-height: 44px; padding: 0 16px; border: 1px solid #4F6B57; border-radius: 22px; background: transparent; color: #F1EEE6; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer" data-neas-click="10">Museu</button>
+
+</div>
+<div data-h="palco" style="position: relative; width: 100%; aspect-ratio: 760 / 430">
+<div aria-hidden="false" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs><clipPath id="c6"><circle cx="380" cy="236" r="186"></circle></clipPath></defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c6)" fill="none" stroke="#B8AE96" stroke-width="1">
+<path d="M180 120 H580 M180 160 H580 M180 200 H580 M180 240 H580 M180 280 H580 M180 320 H580 M180 360 H580 M180 400 H580 M220 100 V430 M260 100 V430 M300 100 V430 M340 100 V430 M380 100 V430 M420 100 V430 M460 100 V430 M500 100 V430 M540 100 V430"></path>
+<path d="M180 330 H580" stroke="#B8AE96" stroke-width="1.4"></path>
+<path d="M230 330 V300 H262 V330 M500 330 V292 H526 V330" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 70%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de vidraria de laboratório com uma muda em cultivo hidropônico">
+<path d="M230 70 V150 L150 320 Q140 345 165 345 H355 Q380 345 370 320 L290 150 V70" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></path>
+<path d="M186 262 Q260 250 334 262 L370 320 Q380 345 355 345 H165 Q140 345 150 320 Z" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.2"></path>
+<path d="M260 255 Q330 254 334 262 L370 320 Q380 345 355 345 H260 Z" fill="url(#eh)"></path>
+<path d="M222 70 H298" stroke="#1E3B27" stroke-width="3" stroke-linecap="round"></path>
+<path d="M290 150 L370 320 Q380 345 355 345" fill="none" stroke="#1E3B27" stroke-width="1" stroke-opacity="0.5"></path>
+<g fill="none" stroke="#1E3B27" stroke-width="1.1"><circle cx="230" cy="300" r="5"></circle><circle cx="300" cy="290" r="4"></circle><circle cx="270" cy="318" r="3.5"></circle><circle cx="322" cy="312" r="3"></circle></g>
+<path d="M260 262 C258 200 258 150 262 110 M260 262 C250 280 242 300 236 320 M260 262 C268 284 278 300 286 318 M260 262 C258 288 262 310 258 330" fill="none" stroke="#1E3B27" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M262 110 C246 92 222 86 204 92 C220 104 242 110 262 110 Z M262 124 C280 104 304 98 322 104 C306 118 284 124 262 124 Z M262 112 C258 90 262 66 274 50 C280 72 276 94 262 112 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.5"></path>
+<rect x="34" y="266" width="132" height="14" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></rect>
+<path d="M44 280 V346 M156 280 V346" stroke="#1E3B27" stroke-width="3"></path>
+<g stroke="#1E3B27" stroke-width="1.5"><path d="M56 186 H76 V316 Q76 326 66 326 Q56 326 56 316 Z" fill="#F2EEE5"></path><path d="M90 196 H110 V316 Q110 326 100 326 Q90 326 90 316 Z" fill="#F2EEE5"></path><path d="M124 176 H144 V316 Q144 326 134 326 Q124 326 124 316 Z" fill="#F2EEE5"></path></g>
+<g stroke="#1E3B27" stroke-width="1"><path d="M57 270 H75 V316 Q75 325 66 325 Q57 325 57 316 Z" fill="#E4DCCB"></path><path d="M91 290 H109 V316 Q109 325 100 325 Q91 325 91 316 Z" fill="#E4DCCB"></path><path d="M125 250 H143 V316 Q143 325 134 325 Q125 325 125 316 Z" fill="#E4DCCB"></path></g>
+<ellipse cx="436" cy="334" rx="72" ry="18" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></ellipse>
+<ellipse cx="436" cy="331" rx="60" ry="13" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1"></ellipse>
+<g fill="#1E3B27" fill-opacity="0.7"><circle cx="412" cy="330" r="3"></circle><circle cx="428" cy="326" r="2"></circle><circle cx="446" cy="334" r="3.5"></circle><circle cx="462" cy="328" r="2.5"></circle><circle cx="420" cy="336" r="1.8"></circle><circle cx="452" cy="324" r="1.6"></circle></g>
+<path d="M20 358 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs><clipPath id="c8"><circle cx="380" cy="236" r="186"></circle></clipPath></defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c8)" fill="none" stroke="#B8AE96" stroke-width="1">
+<path d="M180 120 H580 M180 160 H580 M180 200 H580 M180 240 H580 M180 280 H580 M180 320 H580 M180 360 H580 M180 400 H580 M220 100 V430 M260 100 V430 M300 100 V430 M340 100 V430 M380 100 V430 M420 100 V430 M460 100 V430 M500 100 V430 M540 100 V430"></path>
+<path d="M180 330 H580" stroke="#B8AE96" stroke-width="1.4"></path>
+<path d="M230 330 V300 H262 V330 M500 330 V292 H526 V330" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 64%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de uma placa de Petri com uma membrana de nanocelulose sendo erguida por uma pinça">
+<path d="M70 210 L70 160 Q70 150 80 150 L90 150 L90 210" fill="none" stroke="#1E3B27" stroke-width="1.4"></path>
+<path d="M58 150 H102" stroke="#1E3B27" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M76 150 V110 L48 196 Q44 210 58 210 H102 Q116 210 112 196 L84 110 V150" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M60 178 Q80 172 100 178 L112 196 Q116 210 102 210 H58 Q44 210 48 196 Z" fill="#E4DCCB"></path>
+<ellipse cx="250" cy="262" rx="176" ry="62" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></ellipse>
+<path d="M74 262 V276 A176 62 0 0 0 426 276 V262" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></path>
+<path d="M74 262 V276 A176 62 0 0 0 426 276 V262 A176 62 0 0 1 74 262 Z" fill="url(#eh)"></path>
+<ellipse cx="250" cy="260" rx="160" ry="52" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1"></ellipse>
+<g fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.1"><ellipse cx="170" cy="262" rx="16" ry="6"></ellipse><ellipse cx="214" cy="284" rx="10" ry="4"></ellipse><ellipse cx="300" cy="280" rx="20" ry="7"></ellipse><ellipse cx="350" cy="252" rx="12" ry="4.5"></ellipse><ellipse cx="260" cy="236" rx="9" ry="3.5"></ellipse><ellipse cx="140" cy="244" rx="7" ry="2.8"></ellipse><ellipse cx="380" cy="272" rx="8" ry="3"></ellipse></g>
+<path d="M150 212 C200 176 300 170 372 192 C362 224 280 236 172 230 Z" fill="#E4DCCB" fill-opacity="0.92" stroke="#1E3B27" stroke-width="1.5"></path>
+<path d="M176 220 C230 206 300 200 360 200 M170 210 C226 194 296 188 362 192 M190 226 C246 214 300 210 350 210" fill="none" stroke="#1E3B27" stroke-width="0.8" stroke-opacity="0.6"></path>
+<path d="M372 192 C366 210 350 222 326 228" fill="none" stroke="#1E3B27" stroke-width="1" stroke-opacity="0.6"></path>
+<path d="M368 190 L478 74 M378 198 L486 84" stroke="#1E3B27" stroke-width="3" stroke-linecap="round"></path>
+<path d="M478 74 L494 60 M486 84 L494 60" stroke="#1E3B27" stroke-width="3" stroke-linecap="round"></path>
+<path d="M20 358 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs><clipPath id="c9"><circle cx="380" cy="236" r="186"></circle></clipPath></defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c9)" fill="none" stroke="#B8AE96" stroke-width="1">
+<path d="M180 120 H580 M180 160 H580 M180 200 H580 M180 240 H580 M180 280 H580 M180 320 H580 M180 360 H580 M180 400 H580 M220 100 V430 M260 100 V430 M300 100 V430 M340 100 V430 M380 100 V430 M420 100 V430 M460 100 V430 M500 100 V430 M540 100 V430"></path>
+<path d="M180 330 H580" stroke="#B8AE96" stroke-width="1.4"></path>
+<path d="M230 330 V300 H262 V330 M500 330 V292 H526 V330" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 66%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de um binóculo sobre um caderno de campo aberto">
+<path d="M60 292 L256 262 L256 336 L60 362 Z" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M256 262 L452 292 L452 362 L256 336 Z" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M256 336 L452 362 L452 352 L256 326 Z" fill="url(#eh)"></path>
+<path d="M84 304 L232 282 M84 316 L232 294 M84 328 L232 306 M84 340 L200 322" stroke="#1E3B27" stroke-width="0.9" stroke-opacity="0.7"></path>
+<g fill="none" stroke="#1E3B27" stroke-width="1.2"><path d="M300 296 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z M330 310 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z M360 300 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z M390 316 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z"></path><path d="M296 340 H420" stroke-dasharray="4 4"></path></g>
+<path d="M420 250 L470 330" stroke="#1E3B27" stroke-width="6" stroke-linecap="round"></path>
+<path d="M420 250 L470 330" stroke="#F2EEE5" stroke-width="3.6" stroke-linecap="round"></path>
+<path d="M466 324 L474 340 L470 328 Z" fill="#1E3B27"></path>
+<path d="M150 214 C150 150 190 120 214 120 L224 120 L224 228" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M366 214 C366 150 326 120 302 120 L292 120 L292 228" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<rect x="224" y="150" width="68" height="40" rx="6" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.6"></rect>
+<circle cx="258" cy="140" r="12" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></circle>
+<circle cx="190" cy="214" r="54" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></circle>
+<circle cx="326" cy="214" r="54" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></circle>
+<circle cx="190" cy="214" r="38" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></circle>
+<circle cx="326" cy="214" r="38" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></circle>
+<path d="M168 196 A28 28 0 0 1 196 184 M304 196 A28 28 0 0 1 332 184" fill="none" stroke="#1E3B27" stroke-width="2" stroke-linecap="round"></path>
+<path d="M136 214 C110 160 140 90 210 92" fill="none" stroke="#1E3B27" stroke-width="1.4" stroke-dasharray="2 3"></path>
+<path d="M20 372 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs>
+<clipPath id="c5"><circle cx="380" cy="236" r="186"></circle></clipPath>
+<pattern id="v5" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><path d="M0 0 V5" stroke="#DDD3BE" stroke-width="0.8"></path></pattern>
+</defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c5)" fill="none" stroke="#B8AE96" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="180" y="250" width="400" height="190" fill="url(#v5)" stroke="none"></rect>
+<path d="M190 250 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0" fill="#E8E1D1"></path>
+<path d="M380 250 L190 430 M380 250 L270 430 M380 250 L350 430 M380 250 L410 430 M380 250 L490 430 M380 250 L570 430"></path>
+<path d="M330 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M370 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M408 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M448 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M290 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M360 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M420 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M488 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M240 388 v-20 m0 9 l-9 -9 m9 9 l9 -9 M520 388 v-20 m0 9 l-9 -9 m9 9 l9 -9" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 66%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de uma estufa com mudas">
+<path d="M60 330 V200 Q60 120 260 100 Q460 120 460 200 V330 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.8"></path>
+<path d="M260 100 Q460 120 460 200 V330 H260 Z" fill="url(#eh)"></path>
+<path d="M110 330 V156 M160 330 V125 M210 330 V106 M260 330 V100 M310 330 V106 M360 330 V125 M410 330 V156 M60 260 H460 M60 200 Q260 172 460 200" fill="none" stroke="#1E3B27" stroke-width="1" stroke-opacity="0.75"></path>
+<rect x="235" y="250" width="50" height="80" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></rect>
+<path d="M90 255 v-14 m0 6 l-6 -6 m6 6 l6 -6 M120 255 v-16 m0 7 l-7 -6 m7 6 l7 -6 M150 255 v-12 m0 5 l-5 -5 m5 5 l5 -5 M180 255 v-16 m0 7 l-7 -6 m7 6 l7 -6 M210 255 v-13 m0 6 l-6 -5 m6 5 l6 -5 M310 255 v-15 m0 6 l-6 -6 m6 6 l6 -6 M340 255 v-12 m0 5 l-5 -5 m5 5 l5 -5 M370 255 v-16 m0 7 l-7 -6 m7 6 l7 -6 M400 255 v-13 m0 6 l-6 -5 m6 5 l6 -5 M430 255 v-15 m0 6 l-6 -6 m6 6 l6 -6" fill="none" stroke="#1E3B27" stroke-width="1.3" stroke-linecap="round"></path>
+<rect x="30" y="334" width="200" height="22" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.4"></rect>
+<rect x="290" y="334" width="200" height="22" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.4"></rect>
+<path d="M60 334 v-24 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14 M110 334 v-30 m0 12 c-12 -4 -18 -12 -20 -22 c12 2 18 10 20 22 m0 -8 c10 -6 18 -10 26 -10 c-4 10 -14 14 -26 16 M160 334 v-22 m0 8 c-10 -4 -14 -10 -16 -16 c8 2 14 8 16 16 m0 -4 c8 -4 14 -6 20 -6 c-4 6 -10 10 -20 10 M205 334 v-28 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14 M320 334 v-26 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14 M370 334 v-32 m0 12 c-12 -4 -18 -12 -20 -22 c12 2 18 10 20 22 m0 -8 c10 -6 18 -10 26 -10 c-4 10 -14 14 -26 16 M420 334 v-22 m0 8 c-10 -4 -14 -10 -16 -16 c8 2 14 8 16 16 m0 -4 c8 -4 14 -6 20 -6 c-4 6 -10 10 -20 10 M465 334 v-28 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.3" stroke-linejoin="round"></path>
+<path d="M20 358 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs>
+<clipPath id="c4"><circle cx="380" cy="236" r="186"></circle></clipPath>
+<pattern id="v4" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 V5" stroke="#DDD3BE" stroke-width="0.8"></path></pattern>
+</defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c4)" fill="none" stroke="#B8AE96" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M180 100 H580 V420 H180 Z" fill="url(#v4)"></path>
+<path d="M210 124 H550 V396 H210 Z" fill="#E8E1D1" stroke="#B8AE96"></path>
+<path d="M210 200 H550 M380 124 V200 M296 124 V200 M466 124 V200"></path>
+<g stroke="#B8AE96"><circle cx="252" cy="162" r="10"></circle><path d="M244 162 h16 M252 154 v16"></path><ellipse cx="338" cy="162" rx="20" ry="9"></ellipse><path d="M318 162 h40"></path><path d="M410 170 C414 150 430 146 440 152 C446 158 440 170 430 172 Z"></path><path d="M494 150 l12 24 l12 -24 Z M500 158 h12"></path></g>
+<rect x="430" y="332" width="108" height="50" fill="#E8E1D1" stroke="#B8AE96"></rect>
+<path d="M442 352 H526 M442 362 H512 M442 372 H494" stroke="#B8AE96"></path>
+<path d="M226 372 H306 M226 368 V376 M246 370 V374 M266 368 V376 M286 370 V374 M306 368 V376" stroke="#B8AE96"></path>
+<text x="226" y="390" font-family="Chivo Mono, monospace" font-size="9" fill="#9A9079" stroke="none" letter-spacing="1">ESCALA</text>
+<text x="442" y="345" font-family="Chivo Mono, monospace" font-size="8" fill="#9A9079" stroke="none" letter-spacing="0.6">MUSEU DA BIODIVERSIDADE</text>
+<g fill="#B8AE96" stroke="none"><circle cx="218" cy="132" r="2"></circle><circle cx="542" cy="132" r="2"></circle><circle cx="218" cy="388" r="2"></circle><circle cx="542" cy="388" r="2"></circle></g>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 52%; aspect-ratio: 560 / 320; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 560 320" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de um crânio de capivara">
+<defs><linearGradient id="h4b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2EAD6"></stop><stop offset="1" stop-color="#D6C7A4"></stop></linearGradient></defs>
+<path d="M210 262 C180 270 166 290 176 304 C196 304 214 294 222 284 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.5"></path>
+<path d="M210 262 C260 250 340 252 420 256 L470 266 C460 284 430 294 400 292 C330 290 260 292 210 286 C196 280 196 268 210 262 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M210 286 C260 292 330 290 400 292 C430 294 460 284 470 266 C420 280 300 282 210 274 Z" fill="url(#eh)"></path>
+<path d="M466 266 C478 270 486 282 482 298 L470 296 C470 284 466 274 458 270 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.3"></path>
+<path d="M40 170 C40 110 110 70 200 70 C300 70 400 96 470 140 C500 158 516 176 512 196 C500 204 470 204 440 200 L420 236 C380 250 300 254 220 246 C150 240 80 224 50 206 C42 196 40 184 40 170 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.8"></path>
+<path d="M50 206 C80 224 150 240 220 246 C300 254 380 250 420 236 L440 200 C380 220 260 222 160 210 C110 204 70 194 44 180 Z" fill="url(#est)"></path>
+<path d="M90 140 C130 120 180 118 220 130 C200 160 160 176 110 176 C96 168 90 154 90 140 Z" fill="url(#eh)" stroke="#1E3B27" stroke-width="1"></path>
+<path d="M250 120 C280 108 320 116 330 142 C336 166 316 186 290 186 C262 186 244 166 244 146 C244 134 246 126 250 120 Z" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M190 188 C240 176 300 190 360 186 C370 198 360 210 340 212 C290 214 240 206 196 206 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.4"></path>
+<path d="M200 200 C250 194 300 200 350 200" fill="none" stroke="#1E3B27" stroke-width="0.8" stroke-opacity="0.5"></path>
+<path d="M470 150 C486 156 496 168 494 180 C484 182 474 176 468 166 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.2"></path>
+<path d="M270 238 v14 M286 238 v16 M302 238 v15 M318 237 v16 M334 237 v15 M350 236 v14 M366 236 v13" stroke="#1E3B27" stroke-width="7.5"></path>
+<path d="M270 238 v14 M286 238 v16 M302 238 v15 M318 237 v16 M334 237 v15 M350 236 v14 M366 236 v13" stroke="#F2EEE5" stroke-width="5"></path>
+<path d="M480 196 C492 214 494 238 484 262 L470 262 C474 238 472 218 464 200 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.4"></path>
+<path d="M200 72 C210 100 214 130 210 160 M120 96 C150 110 170 130 180 150 M340 86 C344 100 346 112 344 124" fill="none" stroke="#1E3B27" stroke-width="1.2"></path>
+<path d="M60 150 C100 120 160 100 220 100" fill="none" stroke="#1E3B27" stroke-opacity="0.6" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<div aria-live="polite" style="display: flex; flex-wrap: wrap; gap: 20px 32px; padding-top: 20px; border-top: 1px solid #4F6B57">
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #AFC0B3">01 · laboratório</p>
+<h2 style="margin: 0; font-size: clamp(26px, 2.8vw, 36px); line-height: 1.1">Lapetox</h2>
+<p style="margin: 0; font-size: 14px; color: #AFC0B3">Laboratório de Pesquisas Toxicológicas</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #D5DDD6">Fica no casarão, logo na entrada do NEAS, com o biotério no andar de baixo. Faz testes de toxicidade antes que um medicamento ou substância chegue às pessoas.</p>
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; line-height: 1.6; color: #F1EEE6">iniciação científica, mestrado e doutorado · coordenação: Profa. Thaisa Borim Pickler [confirmar]</p>
+<a href="#equipe" style="align-self: flex-start; margin-top: 6px; display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 1px solid #F1EEE6; border-radius: 22px; color: #F1EEE6; font-size: 14px; text-decoration: none">ver equipe →</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="historia" aria-labelledby="titulo-historia">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">história</p>
+<h2 id="titulo-historia" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Do pasto à floresta: <span style="white-space: nowrap">33 anos de <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.12em; vertical-align: -0.12em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.82em; height: 1.1em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="5.5" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="5.5" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; font-stretch: 100%; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></span></h2>
+<p style="margin: 0; max-width: 680px; font-size: 17px; line-height: 1.7; color: #3A413C">O terreno da Cidade Universitária já foi plantação de rosas e uva e depois pasto de gado. A história do núcleo acompanha a recuperação dessa área e a gestão das águas da região.</p>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 32px; border-top: 1px solid #1A1F1B">
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">1993</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">O NEAS é criado em novembro, entre os primeiros núcleos de pesquisa da Uniso.</p>
+</li>
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">1995</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">O núcleo catalisa a instalação do Comitê de Bacias Hidrográficas dos Rios Sorocaba e Médio Tietê.</p>
+</li>
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">1999</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">Criação do Banco de Sementes, no compromisso de recuperar o terreno da Cidade Universitária.</p>
+</li>
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">2002</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">Plantio de mais de 1.600 mudas de 23 espécies no câmpus e clonagem da Árvore Grande.</p>
+</li>
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">2009</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">Com a SOS Mata Atlântica, 15 mil mudas de 80 espécies em 7,8 hectares.</p>
+</li>
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">2010</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">Segundo clone da Árvore Grande plantado na Avenida São Paulo.</p>
+</li>
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">2022</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">Inauguração do Museu da Biodiversidade e do meliponário, com plantas que atraem abelhas sem ferrão.</p>
+</li>
+
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">2026</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">Lançamento do livro A avifauna da Uniso, pela Eduniso.</p>
+</li>
+
+</ol>
+<a href="historia.html" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 22px; background: #1A1F1B; color: #FFFFFF; text-decoration: none">ver a linha do tempo completa →</a>
+</div>
+</section>
+
+<section aria-labelledby="titulo-destaque" style="background: #1E3B27; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: stretch">
+<div data-h="destaque-img" style="flex: 1 1 480px; min-width: 0; min-height: 460px; display: flex">
+<img src="img/arvore-grande-clone.jpg" alt="Paineira florida à noite na Cidade Universitária, clone da Árvore Grande" style="display: block; width: 100%; height: 100%; min-height: 460px; object-fit: cover">
+</div>
+<div data-h="destaque-txt" style="flex: 1 1 420px; min-width: 0; box-sizing: border-box; padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #E6CF8E; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #E6CF8E">em destaque</p>
+<h2 id="titulo-destaque" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">A Árvore Grande continua viva em dois clones</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #DCE5DD">Em 2002, o NEAS clonou por enxertia a paineira que deu nome ao bairro da Árvore Grande. A árvore original foi retirada em 2008. Um clone está na Cidade Universitária e o outro voltou ao lugar da original, na Avenida São Paulo.</p>
+<a href="arvore-grande.html" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 1px solid #FFFFFF; border-radius: 22px; color: #FFFFFF; text-decoration: none">ler a história completa →</a>
+</div>
+</div>
+</section>
+
+<section id="imprensa" aria-labelledby="titulo-imprensa">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">notícias</p>
+<h2 id="titulo-imprensa" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">O <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span> na imprensa</h2>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #1A1F1B">
+
+<li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #C9CCC2; align-items: baseline">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #5A615C">out. 2026 · Eduniso</p>
+<a href="https://editora.uniso.br/editora/catalog/book/72" style="grid-column: 1 / -1; font-size: 18px; font-weight: 500; line-height: 1.4; color: #1A1F1B">A avifauna da Uniso: guia reúne as aves registradas na Cidade Universitária</a>
+</li>
+
+<li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #C9CCC2; align-items: baseline">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #5A615C">mar. 2026 · Diário de Tatuí</p>
+<a href="https://www.diariodetatui.com/2026/03/tatui-realiza-semana-da-agua-com.html" style="grid-column: 1 / -1; font-size: 18px; font-weight: 500; line-height: 1.4; color: #1A1F1B">Semana da Água de Tatuí começa com visita técnica ao NEAS</a>
+</li>
+
+<li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #C9CCC2; align-items: baseline">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #5A615C">set. 2025 · Jornal Cruzeiro do Sul</p>
+<a href="https://www.jornalcruzeiro.com.br/sorocaba/noticias/2025/09/751990-leucena-infesta-regiao-da-vila-sao-joao-e-gera-reclamacoes.html" style="grid-column: 1 / -1; font-size: 18px; font-weight: 500; line-height: 1.4; color: #1A1F1B">Coordenador do NEAS explica avanço da leucena, espécie invasora, na Vila São João</a>
+</li>
+
+<li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #C9CCC2; align-items: baseline">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #5A615C">ago. 2025 · Jornal Cruzeiro do Sul</p>
+<a href="https://www.jornalcruzeiro.com.br/sorocaba/noticias/2025/08/750930-arvores-historicas.html" style="grid-column: 1 / -1; font-size: 18px; font-weight: 500; line-height: 1.4; color: #1A1F1B">Árvores históricas de Sorocaba e o clone da Árvore Grande</a>
+</li>
+
+<li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #C9CCC2; align-items: baseline">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #5A615C">nov. 2023 · Uniso Ciência / Cruzeiro do Sul</p>
+<a href="https://www.jornalcruzeiro.com.br/suplementos/uniso-ciencia/2023/11/725021-interacao-entre-especies-e-registrada-pela-primeira-vez-no-sudeste.html" style="grid-column: 1 / -1; font-size: 18px; font-weight: 500; line-height: 1.4; color: #1A1F1B">Interação entre besouros e pseudoescorpiões é registrada pela primeira vez no Sudeste, no NEAS</a>
+</li>
+
+<li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #C9CCC2; align-items: baseline">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #5A615C">fev. 2023 · Uniso Ciência / Cruzeiro do Sul</p>
+<a href="https://www.jornalcruzeiro.com.br/suplementos/uniso-ciencia/2023/02/710121-uniso-inaugura-novo-museu-da-biodiversidade.html" style="grid-column: 1 / -1; font-size: 18px; font-weight: 500; line-height: 1.4; color: #1A1F1B">Uniso inaugura o novo Museu da Biodiversidade, na área do NEAS</a>
+</li>
+
+</ul>
+</div>
+</section>
+
+<section id="equipe" aria-labelledby="titulo-equipe" style="background: #DCDFD6">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">equipe</p>
+<h2 id="titulo-equipe" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Quem faz o <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></h2>
+</div>
+<ul data-h="equipe" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px">
+
+<li style="display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="Foto de Nobel Penteado de Freitas" style="aspect-ratio: 4 / 5; background: #A9B1A3"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Nobel Penteado de Freitas</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A615C">Professor titular, coordenador do NEAS</p>
+</div>
+</li>
+
+<li style="display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="Foto de Thiago Simon Marques" style="aspect-ratio: 4 / 5; background: #A9B1A3"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Thiago Simon Marques</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A615C">Coordenador do Laboratório de Ecologia Aplicada</p>
+</div>
+</li>
+
+<li style="display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="Foto de Heitor Zochio Fischer" style="aspect-ratio: 4 / 5; background: #A9B1A3"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Heitor Zochio Fischer</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A615C">Professor de Ciências Biológicas, meliponário</p>
+</div>
+</li>
+
+<li style="display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="Foto de Cris" style="aspect-ratio: 4 / 5; background: #A9B1A3"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Cris</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A615C">[função no NEAS]</p>
+</div>
+</li>
+
+<li style="display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="Foto de Jair" style="aspect-ratio: 4 / 5; background: #A9B1A3"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">Jair</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A615C">[função no NEAS]</p>
+</div>
+</li>
+
+</ul>
+</div>
+</section>
+
+<section id="visite" aria-labelledby="titulo-visite">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">visite</p>
+<h2 id="titulo-visite" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Agende uma visita ao <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3A413C">Escolas e grupos podem conhecer o viveiro, o Museu da Biodiversidade e a mata do núcleo com agendamento prévio.</p>
+</div>
+<dl style="margin: 0; display: grid; grid-template-columns: 140px minmax(0, 1fr); border-top: 1px solid #1A1F1B">
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Endereço</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">Cidade Universitária Prof. Aldo Vannucchi · Rod. Raposo Tavares, km 92,5 · Sorocaba, SP</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Como chegar</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">Pela rodovia ou por dentro da Cidade Universitária, pela trilha que sai do Hospital Veterinário</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Público</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">Escolas, universidades e grupos organizados</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Horários</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">[dias e horários de visita]</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Contato</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">[e-mail] · [telefone]</dd>
+</dl>
+<a href="#visite" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 22px; background: #1A1F1B; color: #FFFFFF; text-decoration: none">solicitar agendamento →</a>
+</div>
+<div role="img" data-h="mapa" aria-label="Mapa com a localização do NEAS na Cidade Universitária" style="flex: 1 1 420px; min-width: 0; min-height: 420px; background: #D6DACF; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box">
+<p style="margin: 0; font-size: 12px; color: #FFFFFF; background: #1A1F1B; padding: 4px 8px">[Mapa: acesso pela rodovia e pela trilha do Hospital Veterinário]</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="titulo-novidades" style="background: #DCDFD6">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 72px 24px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+<h2 id="titulo-novidades" style="margin: 0; font-size: 22px; font-weight: 500">Receba as novidades do <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span>.</h2>
+<div style="width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 6px; text-align: left">
+<label for="email-novidades" style="font-size: 13px; color: #3A413C">Seu e-mail</label>
+<input id="email-novidades" type="email" placeholder="nome@email.com" style="box-sizing: border-box; width: 100%; min-height: 44px; border: none; border-bottom: 1px solid #1A1F1B; background: transparent; font: inherit; font-size: 16px; padding: 0 2px">
+</div>
+<button type="button" style="min-height: 40px; padding: 0 20px; border: 1px solid #1A1F1B; border-radius: 20px; background: transparent; font: inherit; font-size: 14px; cursor: pointer">inscrever →</button>
+</div>
+</section>
+
+<footer style="background: #8E998B; color: #1A1F1B">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 32px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 40px; font-size: 13px; line-height: 1.5">
+<div style="display: flex; align-items: flex-end; gap: 6px">
+<svg viewBox="0 0 120 160" width="27" height="36" aria-hidden="true">
+<path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1A1F1B"></path>
+<path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#1A1F1B" stroke-width="5" stroke-linejoin="round"></path>
+<path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#1A1F1B" stroke-width="4.5" stroke-linecap="round"></path>
+<path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#1A1F1B"></path>
+<path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1A1F1B"></path>
+<path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#1A1F1B" stroke-width="5" stroke-linecap="round"></path>
+</svg>
+<span style="display: flex; justify-content: space-between; width: 72px; font-family: 'Libre Caslon Text', serif; font-size: 24px; line-height: 0.74"><span>N</span><span>E</span><span>A</span><span>S</span></span>
+</div>
+<p style="margin: 0">Cidade Universitária Prof. Aldo Vannucchi<br>Rod. Raposo Tavares, km 92,5 · Sorocaba, SP</p>
+<p style="margin: 0">[telefone]<br>[e-mail do NEAS]</p>
+<p style="margin: 0">Visitas com agendamento<br>[dias e horários]</p>
+<a href="https://uniso.br" style="color: #1A1F1B">Universidade de Sorocaba</a>
+</div>
+</footer>
+
+</div>
+</div>
+<template id="neas-tpl">
+<div style="background: #ECEBE6; color: #1A1F1B; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 16px">
+
+<header style="background: #1E3B27; color: #F1EEE6">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 0 24px">
+<div data-menu="{{menuAberto}}" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 28px; min-height: 68px; border-bottom: 1px solid #4F6B57">
+<nav aria-label="Páginas do site" data-h="cab-nav" style="flex: 1 1 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 26px; padding: 14px 0; font-size: 14px">
+<a href="#topo" aria-current="page" style="color: #F1EEE6; text-decoration: none; font-weight: 600">Início</a>
+<a href="#sobre" style="color: #F1EEE6; text-decoration: none; font-weight: 400">O NEAS</a>
+<a href="#espacos" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Espaços</a>
+<a href="historia.html" style="color: #F1EEE6; text-decoration: none; font-weight: 400">História</a>
+<a href="arvore-grande.html" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Árvore Grande</a>
+<a href="#imprensa" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Imprensa</a>
+<a href="#equipe" style="color: #F1EEE6; text-decoration: none; font-weight: 400">Equipe</a>
+</nav>
+<a href="#visite" data-h="cab-cta" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border: 1px solid #F1EEE6; border-radius: 20px; color: #F1EEE6; font-size: 14px; text-decoration: none; white-space: nowrap">agendar visita</a>
+<button type="button" data-h="menu-btn" onClick="{{alternarMenu}}" aria-expanded="{{menuAberto}}" style="display: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #4F6B57; border-radius: 22px; background: transparent; color: #F1EEE6; font: inherit; font-size: 14px; cursor: pointer">menu <span aria-hidden="true" style="font-size: 18px; line-height: 1">≡</span></button>
+</div>
+</div>
+</header>
+
+<section id="topo" aria-labelledby="titulo-abertura" data-h="abertura" style="position: relative; height: clamp(560px, 86vh, 860px); overflow: hidden; background: #10201A; color: #F4F1E8">
+<img src="img/viveiro-estufa.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: neasFoto 1.6s ease both">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,28,20,0.55) 0%, rgba(14,28,20,0.45) 45%, rgba(14,28,20,0.85) 100%)"></div>
+<div style="position: relative; height: 100%; max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 0 24px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; text-align: center">
+<h1 id="titulo-abertura" style="margin: 0; display: flex; align-items: flex-end; gap: clamp(8px, 1.2vw, 16px)">
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">NEAS, Núcleo de Estudos Ambientais da Uniso</span>
+<svg viewBox="0 0 120 160" aria-hidden="true" style="width: clamp(66px, 9vw, 120px); height: auto; overflow: visible">
+<path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#6F95E6" style="animation: neasSurge 0.8s ease 0.9s both"></path>
+<path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" pathLength="1" fill="none" stroke="#F4F1E8" stroke-width="5" stroke-linejoin="round" style="stroke-dasharray: 1; animation: neasTraco 1s ease 0.2s both"></path>
+<path d="M49 80 H65" pathLength="1" stroke="#F4F1E8" stroke-width="5" stroke-linecap="round" style="stroke-dasharray: 1; animation: neasTraco 0.4s ease 0.9s both"></path>
+<path d="M57 80 C57 62 56 46 60 32" pathLength="1" fill="none" stroke="#7BC07A" stroke-width="4.5" stroke-linecap="round" style="stroke-dasharray: 1; animation: neasTraco 0.7s ease 1.1s both"></path>
+<path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#7BC07A" style="transform-box: fill-box; transform-origin: 100% 100%; animation: neasBrota 0.6s cubic-bezier(.3,1.4,.5,1) 1.5s both"></path>
+<path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#A8D89A" style="transform-box: fill-box; transform-origin: 50% 100%; animation: neasBrota 0.6s cubic-bezier(.3,1.4,.5,1) 1.7s both"></path>
+<path d="M59.5 46 C68 41 78 36 96 33" pathLength="1" fill="none" stroke="#D9A93A" stroke-width="5" stroke-linecap="round" style="stroke-dasharray: 1; animation: neasTraco 0.6s ease 1.6s both"></path>
+</svg>
+<span aria-hidden="true" style="display: inline-flex; flex-direction: column; gap: clamp(6px, 0.9vw, 12px)">
+<span style="display: flex; justify-content: space-between; font-family: 'Libre Caslon Text', serif; font-weight: 400; font-size: clamp(58px, 8.4vw, 116px); line-height: 0.74; letter-spacing: 0">
+<span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.0s both">N</span><span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.2s both">E</span><span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.4s both">A</span><span style="animation: neasLetra 0.7s cubic-bezier(.2,.7,.2,1) 1.6s both">S</span>
+</span>
+<span style="font-family: Oswald, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(12px, 1.75vw, 24px); letter-spacing: 0.05em; white-space: nowrap; animation: neasSurge 0.9s ease 2.0s both">NÚCLEO DE ESTUDOS AMBIENTAIS – UNISO</span>
+</span>
+</h1>
+<p style="margin: 0; max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: #E4EBE5; animation: neasSurge 0.9s ease 2.4s both">Há 33 anos estudando, recuperando e cuidando da natureza da região de Sorocaba.</p>
+<a href="#sobre" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border: 1px solid #F4F1E8; border-radius: 24px; color: #F4F1E8; font-size: 15px; text-decoration: none; animation: neasSurge 0.9s ease 2.6s both">conheça o NEAS <span aria-hidden="true">↓</span></a>
+</div>
+<p style="position: absolute; left: 24px; right: 24px; bottom: 16px; margin: 0; text-align: right; font-family: 'Chivo Mono', monospace; font-size: 11px; color: rgba(244,241,232,0.7)">Estufas do viveiro do NEAS · [crédito da foto]</p>
+</section>
+
+<section id="sobre" aria-labelledby="titulo-sobre">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">sobre o NEAS</p>
+<h2 id="titulo-sobre" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">O que é o <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #1A1F1B">O Núcleo de Estudos Ambientais é a parte da Uniso dedicada ao meio ambiente. Funciona desde 1993 numa área afastada dentro da Cidade Universitária, com laboratórios, viveiro de mudas, museu e muita mata.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3A413C">É ali que acontecem as aulas práticas de biologia, agronomia, engenharia ambiental e veterinária, e as pesquisas de iniciação científica, mestrado e doutorado. O núcleo nasceu junto com a universidade, ajudou a criar o Comitê de Bacias dos rios Sorocaba e Médio Tietê e transformou um antigo pasto em floresta.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3A413C">O núcleo fica um pouco afastado do resto da Cidade Universitária. Na entrada está o casarão, com três laboratórios e o biotério. Mais acima ficam a área de campo e didática, com o viveiro, o meliponário e o CEPAG, área experimental da agronomia, e o Museu da Biodiversidade. A ideia inicial era que tudo isso virasse um Jardim Botânico, e por isso há tantas espécies nativas espalhadas pelo terreno.</p>
+</div>
+<figure style="flex: 1 1 420px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 8px">
+<img src="img/arvore-grande-clone.jpg" alt="Clone da Árvore Grande florido à noite na Cidade Universitária" data-h="sobre-img" style="display: block; width: 100%; height: 460px; object-fit: cover">
+<figcaption style="font-size: 13px; color: #5A615C">Clone da Árvore Grande na Cidade Universitária. [crédito da foto]</figcaption>
+</figure>
+</div>
+</section>
+
+<section aria-label="O NEAS em números" style="background: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 48px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px" data-h="numeros">
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">1993</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Fundação do núcleo, entre os primeiros grupos de pesquisa da Uniso</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">+16 mil</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Mudas nativas plantadas no câmpus nos plantios de 2002 e 2009</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">7,8 ha</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Área reflorestada em parceria com a Fundação SOS Mata Atlântica</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1A1F1B; padding-top: 16px">
+<p style="margin: 0; font-size: 40px; font-weight: 600; font-family: 'Hanken Grotesk', sans-serif; color: #1E3B27" data-h="num-v">~50</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A413C">Espécies de mudas nativas nas estufas do viveiro</p>
+</div>
+</div>
+</section>
+
+<section id="espacos" aria-labelledby="titulo-espacos" style="background: #1E3B27; color: #F1EEE6">
+<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+<defs>
+<pattern id="eh" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><path d="M0 0 V4" stroke="#1E3B27" stroke-opacity="0.4" stroke-width="1.1"></path></pattern>
+<pattern id="ehx" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)"><path d="M0 0 V4" stroke="#1E3B27" stroke-opacity="0.32" stroke-width="1"></path></pattern>
+<pattern id="esc" width="12" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 A6 6 0 0 1 12 8 M-6 4 A6 6 0 0 1 6 4 M6 4 A6 6 0 0 1 18 4" fill="none" stroke="#1E3B27" stroke-opacity="0.3" stroke-width="0.9"></path></pattern>
+<pattern id="est" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="0.8" fill="#1E3B27" fill-opacity="0.4"></circle></pattern>
+<g id="pp"><path d="M0 0 C16 -20 18 -62 6 -96 C0 -102 -8 -98 -10 -92 C-20 -60 -16 -22 0 0 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path><path d="M0 0 C-12 -22 -16 -58 -9 -90 C-6 -60 -4 -30 0 0 Z" fill="url(#eh)"></path><path d="M3 -14 C7 -40 7 -64 2 -86" fill="none" stroke="#1E3B27" stroke-width="1"></path></g>
+<g id="lf"><path d="M0 0 C12 -18 14 -50 0 -74 C-14 -50 -12 -18 0 0 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.5"></path><path d="M0 0 C-12 -18 -14 -50 0 -74 Z" fill="url(#eh)"></path><path d="M0 -4 V-68" stroke="#1E3B27" stroke-width="1"></path></g>
+</defs>
+</svg>
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 80px 24px 80px">
+<div data-h="hero-grid" style="margin-top: 0; display: flex; flex-wrap: wrap; gap: 28px 64px; align-items: flex-start">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 id="titulo-espacos" data-h="hero-h1" style="margin: 0; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.04">Três laboratórios, um viveiro e um museu</h2>
+<p style="margin: 0; max-width: 460px; font-size: 16px; line-height: 1.6; color: #C9D6CB">Tudo isso fica dentro da Cidade Universitária da Uniso. Escolha um espaço para saber o que acontece lá.</p>
+<ol data-h="lista-d" style="margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-bottom: 1px solid #4F6B57">
+<sc-for list="{{espacos}}" as="e" hint-placeholder-count="5">
+<li style="border-top: 1px solid #4F6B57">
+<button type="button" onClick="{{e.ir}}" aria-pressed="{{e.atual}}" style="width: 100%; display: grid; grid-template-columns: 36px minmax(0, 1fr) 20px; align-items: center; gap: 12px; padding: 14px 0; border: none; background: transparent; color: {{e.cor}}; text-align: left; cursor: pointer; font: inherit">
+<span style="font-family: 'Chivo Mono', monospace; font-size: 12px">{{e.num}}</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 19px; font-weight: 600; line-height: 1.2">{{e.nome}}</span><span style="font-size: 13px; line-height: 1.35; opacity: 0.8">{{e.nomeLongo}}</span></span>
+<span aria-hidden="true" style="opacity: {{e.seta}}">→</span>
+</button>
+</li>
+</sc-for>
+</ol>
+</div>
+<div style="flex: 1.35 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div data-h="lista-m" role="group" aria-label="Espaços do NEAS" style="display: none; gap: 8px; overflow-x: auto; margin: 0 -24px; padding: 0 24px 4px; scroll-padding: 0 24px">
+<sc-for list="{{espacos}}" as="e" hint-placeholder-count="5">
+<button type="button" onClick="{{e.ir}}" aria-pressed="{{e.atual}}" style="flex: none; min-height: 44px; padding: 0 16px; border: 1px solid {{e.borda}}; border-radius: 22px; background: {{e.fundo}}; color: {{e.corChip}}; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer">{{e.nome}}</button>
+</sc-for>
+</div>
+<div data-h="palco" style="position: relative; width: 100%; aspect-ratio: 760 / 430">
+<div aria-hidden="{{e0.oculto}}" style="position: absolute; inset: 0; opacity: {{e0.op}}; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs><clipPath id="c6"><circle cx="380" cy="236" r="186"></circle></clipPath></defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c6)" fill="none" stroke="#B8AE96" stroke-width="1">
+<path d="M180 120 H580 M180 160 H580 M180 200 H580 M180 240 H580 M180 280 H580 M180 320 H580 M180 360 H580 M180 400 H580 M220 100 V430 M260 100 V430 M300 100 V430 M340 100 V430 M380 100 V430 M420 100 V430 M460 100 V430 M500 100 V430 M540 100 V430"></path>
+<path d="M180 330 H580" stroke="#B8AE96" stroke-width="1.4"></path>
+<path d="M230 330 V300 H262 V330 M500 330 V292 H526 V330" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 70%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de vidraria de laboratório com uma muda em cultivo hidropônico">
+<path d="M230 70 V150 L150 320 Q140 345 165 345 H355 Q380 345 370 320 L290 150 V70" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></path>
+<path d="M186 262 Q260 250 334 262 L370 320 Q380 345 355 345 H165 Q140 345 150 320 Z" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.2"></path>
+<path d="M260 255 Q330 254 334 262 L370 320 Q380 345 355 345 H260 Z" fill="url(#eh)"></path>
+<path d="M222 70 H298" stroke="#1E3B27" stroke-width="3" stroke-linecap="round"></path>
+<path d="M290 150 L370 320 Q380 345 355 345" fill="none" stroke="#1E3B27" stroke-width="1" stroke-opacity="0.5"></path>
+<g fill="none" stroke="#1E3B27" stroke-width="1.1"><circle cx="230" cy="300" r="5"></circle><circle cx="300" cy="290" r="4"></circle><circle cx="270" cy="318" r="3.5"></circle><circle cx="322" cy="312" r="3"></circle></g>
+<path d="M260 262 C258 200 258 150 262 110 M260 262 C250 280 242 300 236 320 M260 262 C268 284 278 300 286 318 M260 262 C258 288 262 310 258 330" fill="none" stroke="#1E3B27" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M262 110 C246 92 222 86 204 92 C220 104 242 110 262 110 Z M262 124 C280 104 304 98 322 104 C306 118 284 124 262 124 Z M262 112 C258 90 262 66 274 50 C280 72 276 94 262 112 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.5"></path>
+<rect x="34" y="266" width="132" height="14" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></rect>
+<path d="M44 280 V346 M156 280 V346" stroke="#1E3B27" stroke-width="3"></path>
+<g stroke="#1E3B27" stroke-width="1.5"><path d="M56 186 H76 V316 Q76 326 66 326 Q56 326 56 316 Z" fill="#F2EEE5"></path><path d="M90 196 H110 V316 Q110 326 100 326 Q90 326 90 316 Z" fill="#F2EEE5"></path><path d="M124 176 H144 V316 Q144 326 134 326 Q124 326 124 316 Z" fill="#F2EEE5"></path></g>
+<g stroke="#1E3B27" stroke-width="1"><path d="M57 270 H75 V316 Q75 325 66 325 Q57 325 57 316 Z" fill="#E4DCCB"></path><path d="M91 290 H109 V316 Q109 325 100 325 Q91 325 91 316 Z" fill="#E4DCCB"></path><path d="M125 250 H143 V316 Q143 325 134 325 Q125 325 125 316 Z" fill="#E4DCCB"></path></g>
+<ellipse cx="436" cy="334" rx="72" ry="18" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></ellipse>
+<ellipse cx="436" cy="331" rx="60" ry="13" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1"></ellipse>
+<g fill="#1E3B27" fill-opacity="0.7"><circle cx="412" cy="330" r="3"></circle><circle cx="428" cy="326" r="2"></circle><circle cx="446" cy="334" r="3.5"></circle><circle cx="462" cy="328" r="2.5"></circle><circle cx="420" cy="336" r="1.8"></circle><circle cx="452" cy="324" r="1.6"></circle></g>
+<path d="M20 358 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="{{e1.oculto}}" style="position: absolute; inset: 0; opacity: {{e1.op}}; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs><clipPath id="c8"><circle cx="380" cy="236" r="186"></circle></clipPath></defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c8)" fill="none" stroke="#B8AE96" stroke-width="1">
+<path d="M180 120 H580 M180 160 H580 M180 200 H580 M180 240 H580 M180 280 H580 M180 320 H580 M180 360 H580 M180 400 H580 M220 100 V430 M260 100 V430 M300 100 V430 M340 100 V430 M380 100 V430 M420 100 V430 M460 100 V430 M500 100 V430 M540 100 V430"></path>
+<path d="M180 330 H580" stroke="#B8AE96" stroke-width="1.4"></path>
+<path d="M230 330 V300 H262 V330 M500 330 V292 H526 V330" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 64%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de uma placa de Petri com uma membrana de nanocelulose sendo erguida por uma pinça">
+<path d="M70 210 L70 160 Q70 150 80 150 L90 150 L90 210" fill="none" stroke="#1E3B27" stroke-width="1.4"></path>
+<path d="M58 150 H102" stroke="#1E3B27" stroke-width="2.4" stroke-linecap="round"></path>
+<path d="M76 150 V110 L48 196 Q44 210 58 210 H102 Q116 210 112 196 L84 110 V150" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M60 178 Q80 172 100 178 L112 196 Q116 210 102 210 H58 Q44 210 48 196 Z" fill="#E4DCCB"></path>
+<ellipse cx="250" cy="262" rx="176" ry="62" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></ellipse>
+<path d="M74 262 V276 A176 62 0 0 0 426 276 V262" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></path>
+<path d="M74 262 V276 A176 62 0 0 0 426 276 V262 A176 62 0 0 1 74 262 Z" fill="url(#eh)"></path>
+<ellipse cx="250" cy="260" rx="160" ry="52" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1"></ellipse>
+<g fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.1"><ellipse cx="170" cy="262" rx="16" ry="6"></ellipse><ellipse cx="214" cy="284" rx="10" ry="4"></ellipse><ellipse cx="300" cy="280" rx="20" ry="7"></ellipse><ellipse cx="350" cy="252" rx="12" ry="4.5"></ellipse><ellipse cx="260" cy="236" rx="9" ry="3.5"></ellipse><ellipse cx="140" cy="244" rx="7" ry="2.8"></ellipse><ellipse cx="380" cy="272" rx="8" ry="3"></ellipse></g>
+<path d="M150 212 C200 176 300 170 372 192 C362 224 280 236 172 230 Z" fill="#E4DCCB" fill-opacity="0.92" stroke="#1E3B27" stroke-width="1.5"></path>
+<path d="M176 220 C230 206 300 200 360 200 M170 210 C226 194 296 188 362 192 M190 226 C246 214 300 210 350 210" fill="none" stroke="#1E3B27" stroke-width="0.8" stroke-opacity="0.6"></path>
+<path d="M372 192 C366 210 350 222 326 228" fill="none" stroke="#1E3B27" stroke-width="1" stroke-opacity="0.6"></path>
+<path d="M368 190 L478 74 M378 198 L486 84" stroke="#1E3B27" stroke-width="3" stroke-linecap="round"></path>
+<path d="M478 74 L494 60 M486 84 L494 60" stroke="#1E3B27" stroke-width="3" stroke-linecap="round"></path>
+<path d="M20 358 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="{{e2.oculto}}" style="position: absolute; inset: 0; opacity: {{e2.op}}; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs><clipPath id="c9"><circle cx="380" cy="236" r="186"></circle></clipPath></defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c9)" fill="none" stroke="#B8AE96" stroke-width="1">
+<path d="M180 120 H580 M180 160 H580 M180 200 H580 M180 240 H580 M180 280 H580 M180 320 H580 M180 360 H580 M180 400 H580 M220 100 V430 M260 100 V430 M300 100 V430 M340 100 V430 M380 100 V430 M420 100 V430 M460 100 V430 M500 100 V430 M540 100 V430"></path>
+<path d="M180 330 H580" stroke="#B8AE96" stroke-width="1.4"></path>
+<path d="M230 330 V300 H262 V330 M500 330 V292 H526 V330" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 66%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de um binóculo sobre um caderno de campo aberto">
+<path d="M60 292 L256 262 L256 336 L60 362 Z" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M256 262 L452 292 L452 362 L256 336 Z" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M256 336 L452 362 L452 352 L256 326 Z" fill="url(#eh)"></path>
+<path d="M84 304 L232 282 M84 316 L232 294 M84 328 L232 306 M84 340 L200 322" stroke="#1E3B27" stroke-width="0.9" stroke-opacity="0.7"></path>
+<g fill="none" stroke="#1E3B27" stroke-width="1.2"><path d="M300 296 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z M330 310 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z M360 300 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z M390 316 c4 -6 10 -6 12 0 c-2 6 -10 6 -12 0 Z"></path><path d="M296 340 H420" stroke-dasharray="4 4"></path></g>
+<path d="M420 250 L470 330" stroke="#1E3B27" stroke-width="6" stroke-linecap="round"></path>
+<path d="M420 250 L470 330" stroke="#F2EEE5" stroke-width="3.6" stroke-linecap="round"></path>
+<path d="M466 324 L474 340 L470 328 Z" fill="#1E3B27"></path>
+<path d="M150 214 C150 150 190 120 214 120 L224 120 L224 228" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M366 214 C366 150 326 120 302 120 L292 120 L292 228" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<rect x="224" y="150" width="68" height="40" rx="6" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.6"></rect>
+<circle cx="258" cy="140" r="12" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></circle>
+<circle cx="190" cy="214" r="54" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></circle>
+<circle cx="326" cy="214" r="54" fill="#F2EEE5" stroke="#1E3B27" stroke-width="2"></circle>
+<circle cx="190" cy="214" r="38" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></circle>
+<circle cx="326" cy="214" r="38" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></circle>
+<path d="M168 196 A28 28 0 0 1 196 184 M304 196 A28 28 0 0 1 332 184" fill="none" stroke="#1E3B27" stroke-width="2" stroke-linecap="round"></path>
+<path d="M136 214 C110 160 140 90 210 92" fill="none" stroke="#1E3B27" stroke-width="1.4" stroke-dasharray="2 3"></path>
+<path d="M20 372 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="{{e3.oculto}}" style="position: absolute; inset: 0; opacity: {{e3.op}}; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs>
+<clipPath id="c5"><circle cx="380" cy="236" r="186"></circle></clipPath>
+<pattern id="v5" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><path d="M0 0 V5" stroke="#DDD3BE" stroke-width="0.8"></path></pattern>
+</defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c5)" fill="none" stroke="#B8AE96" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<rect x="180" y="250" width="400" height="190" fill="url(#v5)" stroke="none"></rect>
+<path d="M190 250 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0 q10 -14 20 0 q12 -22 24 0 q10 -16 20 0 q11 -20 22 0" fill="#E8E1D1"></path>
+<path d="M380 250 L190 430 M380 250 L270 430 M380 250 L350 430 M380 250 L410 430 M380 250 L490 430 M380 250 L570 430"></path>
+<path d="M330 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M370 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M408 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M448 290 v-12 m0 5 l-5 -5 m5 5 l5 -5 M290 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M360 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M420 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M488 332 v-16 m0 7 l-7 -7 m7 7 l7 -7 M240 388 v-20 m0 9 l-9 -9 m9 9 l9 -9 M520 388 v-20 m0 9 l-9 -9 m9 9 l9 -9" stroke="#B8AE96"></path>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 66%; aspect-ratio: 520 / 380; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 520 380" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de uma estufa com mudas">
+<path d="M60 330 V200 Q60 120 260 100 Q460 120 460 200 V330 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.8"></path>
+<path d="M260 100 Q460 120 460 200 V330 H260 Z" fill="url(#eh)"></path>
+<path d="M110 330 V156 M160 330 V125 M210 330 V106 M260 330 V100 M310 330 V106 M360 330 V125 M410 330 V156 M60 260 H460 M60 200 Q260 172 460 200" fill="none" stroke="#1E3B27" stroke-width="1" stroke-opacity="0.75"></path>
+<rect x="235" y="250" width="50" height="80" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.4"></rect>
+<path d="M90 255 v-14 m0 6 l-6 -6 m6 6 l6 -6 M120 255 v-16 m0 7 l-7 -6 m7 6 l7 -6 M150 255 v-12 m0 5 l-5 -5 m5 5 l5 -5 M180 255 v-16 m0 7 l-7 -6 m7 6 l7 -6 M210 255 v-13 m0 6 l-6 -5 m6 5 l6 -5 M310 255 v-15 m0 6 l-6 -6 m6 6 l6 -6 M340 255 v-12 m0 5 l-5 -5 m5 5 l5 -5 M370 255 v-16 m0 7 l-7 -6 m7 6 l7 -6 M400 255 v-13 m0 6 l-6 -5 m6 5 l6 -5 M430 255 v-15 m0 6 l-6 -6 m6 6 l6 -6" fill="none" stroke="#1E3B27" stroke-width="1.3" stroke-linecap="round"></path>
+<rect x="30" y="334" width="200" height="22" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.4"></rect>
+<rect x="290" y="334" width="200" height="22" fill="#E4DCCB" stroke="#1E3B27" stroke-width="1.4"></rect>
+<path d="M60 334 v-24 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14 M110 334 v-30 m0 12 c-12 -4 -18 -12 -20 -22 c12 2 18 10 20 22 m0 -8 c10 -6 18 -10 26 -10 c-4 10 -14 14 -26 16 M160 334 v-22 m0 8 c-10 -4 -14 -10 -16 -16 c8 2 14 8 16 16 m0 -4 c8 -4 14 -6 20 -6 c-4 6 -10 10 -20 10 M205 334 v-28 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14 M320 334 v-26 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14 M370 334 v-32 m0 12 c-12 -4 -18 -12 -20 -22 c12 2 18 10 20 22 m0 -8 c10 -6 18 -10 26 -10 c-4 10 -14 14 -26 16 M420 334 v-22 m0 8 c-10 -4 -14 -10 -16 -16 c8 2 14 8 16 16 m0 -4 c8 -4 14 -6 20 -6 c-4 6 -10 10 -20 10 M465 334 v-28 m0 10 c-10 -4 -16 -10 -18 -18 c10 2 16 8 18 18 m0 -6 c8 -6 16 -8 22 -8 c-4 8 -12 12 -22 14" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.3" stroke-linejoin="round"></path>
+<path d="M20 358 H500" stroke="#1E3B27" stroke-width="1.2"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="{{e4.oculto}}" style="position: absolute; inset: 0; opacity: {{e4.op}}; transition: opacity 0.45s ease">
+<svg viewBox="0 0 760 430" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs>
+<clipPath id="c4"><circle cx="380" cy="236" r="186"></circle></clipPath>
+<pattern id="v4" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 V5" stroke="#DDD3BE" stroke-width="0.8"></path></pattern>
+</defs>
+<circle cx="380" cy="236" r="186" fill="#F2EEE5"></circle>
+<g clip-path="url(#c4)" fill="none" stroke="#B8AE96" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M180 100 H580 V420 H180 Z" fill="url(#v4)"></path>
+<path d="M210 124 H550 V396 H210 Z" fill="#E8E1D1" stroke="#B8AE96"></path>
+<path d="M210 200 H550 M380 124 V200 M296 124 V200 M466 124 V200"></path>
+<g stroke="#B8AE96"><circle cx="252" cy="162" r="10"></circle><path d="M244 162 h16 M252 154 v16"></path><ellipse cx="338" cy="162" rx="20" ry="9"></ellipse><path d="M318 162 h40"></path><path d="M410 170 C414 150 430 146 440 152 C446 158 440 170 430 172 Z"></path><path d="M494 150 l12 24 l12 -24 Z M500 158 h12"></path></g>
+<rect x="430" y="332" width="108" height="50" fill="#E8E1D1" stroke="#B8AE96"></rect>
+<path d="M442 352 H526 M442 362 H512 M442 372 H494" stroke="#B8AE96"></path>
+<path d="M226 372 H306 M226 368 V376 M246 370 V374 M266 368 V376 M286 370 V374 M306 368 V376" stroke="#B8AE96"></path>
+<text x="226" y="390" font-family="Chivo Mono, monospace" font-size="9" fill="#9A9079" stroke="none" letter-spacing="1">ESCALA</text>
+<text x="442" y="345" font-family="Chivo Mono, monospace" font-size="8" fill="#9A9079" stroke="none" letter-spacing="0.6">MUSEU DA BIODIVERSIDADE</text>
+<g fill="#B8AE96" stroke="none"><circle cx="218" cy="132" r="2"></circle><circle cx="542" cy="132" r="2"></circle><circle cx="218" cy="388" r="2"></circle><circle cx="542" cy="388" r="2"></circle></g>
+</g>
+<circle cx="380" cy="236" r="194" fill="none" stroke="#557A5F" stroke-width="1"></circle>
+<circle cx="380" cy="236" r="200" fill="none" stroke="#3E6248" stroke-width="0.8" stroke-dasharray="1 5"></circle>
+</svg>
+<div style="position: absolute; left: 50%; top: 55%; height: 52%; aspect-ratio: 560 / 320; transform: translate(-50%, -50%)">
+<svg viewBox="0 0 560 320" style="display: block; width: 100%; height: 100%; overflow: visible" role="img" aria-label="Gravura de um crânio de capivara">
+<defs><linearGradient id="h4b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2EAD6"></stop><stop offset="1" stop-color="#D6C7A4"></stop></linearGradient></defs>
+<path d="M210 262 C180 270 166 290 176 304 C196 304 214 294 222 284 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.5"></path>
+<path d="M210 262 C260 250 340 252 420 256 L470 266 C460 284 430 294 400 292 C330 290 260 292 210 286 C196 280 196 268 210 262 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M210 286 C260 292 330 290 400 292 C430 294 460 284 470 266 C420 280 300 282 210 274 Z" fill="url(#eh)"></path>
+<path d="M466 266 C478 270 486 282 482 298 L470 296 C470 284 466 274 458 270 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.3"></path>
+<path d="M40 170 C40 110 110 70 200 70 C300 70 400 96 470 140 C500 158 516 176 512 196 C500 204 470 204 440 200 L420 236 C380 250 300 254 220 246 C150 240 80 224 50 206 C42 196 40 184 40 170 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.8"></path>
+<path d="M50 206 C80 224 150 240 220 246 C300 254 380 250 420 236 L440 200 C380 220 260 222 160 210 C110 204 70 194 44 180 Z" fill="url(#est)"></path>
+<path d="M90 140 C130 120 180 118 220 130 C200 160 160 176 110 176 C96 168 90 154 90 140 Z" fill="url(#eh)" stroke="#1E3B27" stroke-width="1"></path>
+<path d="M250 120 C280 108 320 116 330 142 C336 166 316 186 290 186 C262 186 244 166 244 146 C244 134 246 126 250 120 Z" fill="#1E3B27" stroke="#1E3B27" stroke-width="1.6"></path>
+<path d="M190 188 C240 176 300 190 360 186 C370 198 360 210 340 212 C290 214 240 206 196 206 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.4"></path>
+<path d="M200 200 C250 194 300 200 350 200" fill="none" stroke="#1E3B27" stroke-width="0.8" stroke-opacity="0.5"></path>
+<path d="M470 150 C486 156 496 168 494 180 C484 182 474 176 468 166 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.2"></path>
+<path d="M270 238 v14 M286 238 v16 M302 238 v15 M318 237 v16 M334 237 v15 M350 236 v14 M366 236 v13" stroke="#1E3B27" stroke-width="7.5"></path>
+<path d="M270 238 v14 M286 238 v16 M302 238 v15 M318 237 v16 M334 237 v15 M350 236 v14 M366 236 v13" stroke="#F2EEE5" stroke-width="5"></path>
+<path d="M480 196 C492 214 494 238 484 262 L470 262 C474 238 472 218 464 200 Z" fill="#F2EEE5" stroke="#1E3B27" stroke-width="1.4"></path>
+<path d="M200 72 C210 100 214 130 210 160 M120 96 C150 110 170 130 180 150 M340 86 C344 100 346 112 344 124" fill="none" stroke="#1E3B27" stroke-width="1.2"></path>
+<path d="M60 150 C100 120 160 100 220 100" fill="none" stroke="#1E3B27" stroke-opacity="0.6" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<div aria-live="polite" style="display: flex; flex-wrap: wrap; gap: 20px 32px; padding-top: 20px; border-top: 1px solid #4F6B57">
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #AFC0B3">{{atual.num}} · {{atual.tipo}}</p>
+<h2 style="margin: 0; font-size: clamp(26px, 2.8vw, 36px); line-height: 1.1">{{atual.nome}}</h2>
+<p style="margin: 0; font-size: 14px; color: #AFC0B3">{{atual.nomeLongo}}</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #D5DDD6">{{atual.texto}}</p>
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; line-height: 1.6; color: #F1EEE6">{{atual.fatos}}</p>
+<a href="{{atual.link}}" style="align-self: flex-start; margin-top: 6px; display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 1px solid #F1EEE6; border-radius: 22px; color: #F1EEE6; font-size: 14px; text-decoration: none">{{atual.cta}} →</a>
+</div>
+<sc-if value="{{atual.temImg}}" hint-placeholder-val="{{ false }}">
+<figure data-h="hero-foto" style="flex: 0 1 240px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 6px">
+<img src="{{atual.img}}" alt="{{atual.foto}}" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover">
+<figcaption style="font-family: 'Chivo Mono', monospace; font-size: 11px; color: #AFC0B3">{{atual.foto}}</figcaption>
+</figure>
+</sc-if>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="historia" aria-labelledby="titulo-historia">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">história</p>
+<h2 id="titulo-historia" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Do pasto à floresta: <span style="white-space: nowrap">33 anos de <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.12em; vertical-align: -0.12em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.82em; height: 1.1em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="5.5" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="5.5" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; font-stretch: 100%; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></span></h2>
+<p style="margin: 0; max-width: 680px; font-size: 17px; line-height: 1.7; color: #3A413C">O terreno da Cidade Universitária já foi plantação de rosas e uva e depois pasto de gado. A história do núcleo acompanha a recuperação dessa área e a gestão das águas da região.</p>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 32px; border-top: 1px solid #1A1F1B">
+<sc-for list="{{marcos}}" as="m" hint-placeholder-count="8">
+<li style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding: 22px 0; border-bottom: 1px solid #C9CCC2">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 15px; font-weight: 500; color: #1E5E2B">{{m.ano}}</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A413C">{{m.texto}}</p>
+</li>
+</sc-for>
+</ol>
+<a href="historia.html" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 22px; background: #1A1F1B; color: #FFFFFF; text-decoration: none">ver a linha do tempo completa →</a>
+</div>
+</section>
+
+<section aria-labelledby="titulo-destaque" style="background: #1E3B27; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: stretch">
+<div data-h="destaque-img" style="flex: 1 1 480px; min-width: 0; min-height: 460px; display: flex">
+<img src="img/arvore-grande-clone.jpg" alt="Paineira florida à noite na Cidade Universitária, clone da Árvore Grande" style="display: block; width: 100%; height: 100%; min-height: 460px; object-fit: cover">
+</div>
+<div data-h="destaque-txt" style="flex: 1 1 420px; min-width: 0; box-sizing: border-box; padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #E6CF8E; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #E6CF8E">em destaque</p>
+<h2 id="titulo-destaque" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">A Árvore Grande continua viva em dois clones</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #DCE5DD">Em 2002, o NEAS clonou por enxertia a paineira que deu nome ao bairro da Árvore Grande. A árvore original foi retirada em 2008. Um clone está na Cidade Universitária e o outro voltou ao lugar da original, na Avenida São Paulo.</p>
+<a href="arvore-grande.html" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 1px solid #FFFFFF; border-radius: 22px; color: #FFFFFF; text-decoration: none">ler a história completa →</a>
+</div>
+</div>
+</section>
+
+<section id="imprensa" aria-labelledby="titulo-imprensa">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">notícias</p>
+<h2 id="titulo-imprensa" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">O <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span> na imprensa</h2>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #1A1F1B">
+<sc-for list="{{noticias}}" as="n" hint-placeholder-count="6">
+<li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #C9CCC2; align-items: baseline">
+<p style="margin: 0; font-family: 'Chivo Mono', monospace; font-size: 12px; color: #5A615C">{{n.data}} · {{n.veiculo}}</p>
+<a href="{{n.link}}" style="grid-column: 1 / -1; font-size: 18px; font-weight: 500; line-height: 1.4; color: #1A1F1B">{{n.titulo}}</a>
+</li>
+</sc-for>
+</ul>
+</div>
+</section>
+
+<section id="equipe" aria-labelledby="titulo-equipe" style="background: #DCDFD6">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">equipe</p>
+<h2 id="titulo-equipe" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Quem faz o <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></h2>
+</div>
+<ul data-h="equipe" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px">
+<sc-for list="{{equipe}}" as="p" hint-placeholder-count="5">
+<li style="display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="Foto de {{p.nome}}" style="aspect-ratio: 4 / 5; background: #A9B1A3"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 17px; font-weight: 600">{{p.nome}}</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #5A615C">{{p.funcao}}</p>
+</div>
+</li>
+</sc-for>
+</ul>
+</div>
+</section>
+
+<section id="visite" aria-labelledby="titulo-visite">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border: 1px solid #1A1F1B; border-radius: 14px; font-family: 'Chivo Mono', monospace; font-size: 12px">visite</p>
+<h2 id="titulo-visite" style="margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Agende uma visita ao <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3A413C">Escolas e grupos podem conhecer o viveiro, o Museu da Biodiversidade e a mata do núcleo com agendamento prévio.</p>
+</div>
+<dl style="margin: 0; display: grid; grid-template-columns: 140px minmax(0, 1fr); border-top: 1px solid #1A1F1B">
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Endereço</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">Cidade Universitária Prof. Aldo Vannucchi · Rod. Raposo Tavares, km 92,5 · Sorocaba, SP</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Como chegar</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">Pela rodovia ou por dentro da Cidade Universitária, pela trilha que sai do Hospital Veterinário</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Público</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">Escolas, universidades e grupos organizados</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Horários</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">[dias e horários de visita]</dd>
+<dt style="padding: 16px 0; border-bottom: 1px solid #C9CCC2; font-weight: 600">Contato</dt>
+<dd style="margin: 0; padding: 16px 0; border-bottom: 1px solid #C9CCC2; line-height: 1.5; color: #3A413C">[e-mail] · [telefone]</dd>
+</dl>
+<a href="#visite" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 22px; background: #1A1F1B; color: #FFFFFF; text-decoration: none">solicitar agendamento →</a>
+</div>
+<div role="img" data-h="mapa" aria-label="Mapa com a localização do NEAS na Cidade Universitária" style="flex: 1 1 420px; min-width: 0; min-height: 420px; background: #D6DACF; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box">
+<p style="margin: 0; font-size: 12px; color: #FFFFFF; background: #1A1F1B; padding: 4px 8px">[Mapa: acesso pela rodovia e pela trilha do Hospital Veterinário]</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="titulo-novidades" style="background: #DCDFD6">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 72px 24px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+<h2 id="titulo-novidades" style="margin: 0; font-size: 22px; font-weight: 500">Receba as novidades do <span role="img" aria-label="NEAS" style="display: inline-flex; align-items: flex-end; gap: 0.1em; vertical-align: -0.08em; white-space: nowrap"><svg viewBox="0 0 120 160" style="width: 0.78em; height: 1.04em" aria-hidden="true"><path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1F4FB5"></path><path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#161616" stroke-width="6" stroke-linejoin="round"></path><path d="M49 80 H65" stroke="#161616" stroke-width="6" stroke-linecap="round"></path><path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#2E8B3E" stroke-width="5" stroke-linecap="round"></path><path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#2E8B3E"></path><path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1E5E2B"></path><path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#D9A93A" stroke-width="5.5" stroke-linecap="round"></path></svg><span aria-hidden="true" style="font-family: 'Libre Caslon Text', serif; font-weight: 400; line-height: 0.74; letter-spacing: 0.04em">NEAS</span></span>.</h2>
+<div style="width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 6px; text-align: left">
+<label for="email-novidades" style="font-size: 13px; color: #3A413C">Seu e-mail</label>
+<input id="email-novidades" type="email" placeholder="nome@email.com" style="box-sizing: border-box; width: 100%; min-height: 44px; border: none; border-bottom: 1px solid #1A1F1B; background: transparent; font: inherit; font-size: 16px; padding: 0 2px">
+</div>
+<button type="button" style="min-height: 40px; padding: 0 20px; border: 1px solid #1A1F1B; border-radius: 20px; background: transparent; font: inherit; font-size: 14px; cursor: pointer">inscrever →</button>
+</div>
+</section>
+
+<footer style="background: #8E998B; color: #1A1F1B">
+<div style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 32px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 40px; font-size: 13px; line-height: 1.5">
+<div style="display: flex; align-items: flex-end; gap: 6px">
+<svg viewBox="0 0 120 160" width="27" height="36" aria-hidden="true">
+<path d="M44.6 118 Q57 114 69.4 118 L82 142 Q86 151 76 151 H38 Q28 151 32 142 Z" fill="#1A1F1B"></path>
+<path d="M53 80 V102 L32 142 Q28 151 38 151 H76 Q86 151 82 142 L61 102 V80" fill="none" stroke="#1A1F1B" stroke-width="5" stroke-linejoin="round"></path>
+<path d="M57 80 C57 62 56 46 60 32" fill="none" stroke="#1A1F1B" stroke-width="4.5" stroke-linecap="round"></path>
+<path d="M57.5 60 C45 62 31 56 24 43 C38 39 51 45 57.5 60 Z" fill="#1A1F1B"></path>
+<path d="M60 33 C53 26 52 15 58 6 C65 14 66 25 60 33 Z" fill="#1A1F1B"></path>
+<path d="M59.5 46 C68 41 78 36 96 33" fill="none" stroke="#1A1F1B" stroke-width="5" stroke-linecap="round"></path>
+</svg>
+<span style="display: flex; justify-content: space-between; width: 72px; font-family: 'Libre Caslon Text', serif; font-size: 24px; line-height: 0.74"><span>N</span><span>E</span><span>A</span><span>S</span></span>
+</div>
+<p style="margin: 0">Cidade Universitária Prof. Aldo Vannucchi<br>Rod. Raposo Tavares, km 92,5 · Sorocaba, SP</p>
+<p style="margin: 0">[telefone]<br>[e-mail do NEAS]</p>
+<p style="margin: 0">Visitas com agendamento<br>[dias e horários]</p>
+<a href="https://uniso.br" style="color: #1A1F1B">Universidade de Sorocaba</a>
+</div>
+</footer>
+
+</div>
+</template>
+<script src="js/morphdom.min.js"></script>
+<script src="js/neas.js"></script>
+<script>
+class Component extends DCLogic {
+renderVals() {
+const espacos = [
+{ nome: 'Lapetox', nomeLongo: 'Laboratório de Pesquisas Toxicológicas', tipo: 'laboratório', texto: 'Fica no casarão, logo na entrada do NEAS, com o biotério no andar de baixo. Faz testes de toxicidade antes que um medicamento ou substância chegue às pessoas.', fatos: 'iniciação científica, mestrado e doutorado · coordenação: Profa. Thaisa Borim Pickler [confirmar]', link: '#equipe', cta: 'ver equipe' },
+{ nome: 'Laminfe', nomeLongo: 'Laboratório de Microbiologia Industrial e Processos Fermentativos', tipo: 'laboratório', texto: 'Usa microrganismos para produzir membranas de nanocelulose, que viram curativos e substitutos temporários de pele, e materiais que ajudam a tirar contaminantes da água.', fatos: 'no casarão [confirmar] · coordenação: Profa. Angela Faustino Jozala [confirmar]', link: '#equipe', cta: 'ver equipe' },
+{ nome: 'Ecologia Aplicada', nomeLongo: 'Laboratório de Ecologia Aplicada', tipo: 'laboratório', texto: 'Estuda os bichos e as plantas da Cidade Universitária e da região, e como eles respondem às mudanças no ambiente.', fatos: 'desde 2022 · coordenação: Prof. Thiago Simon Marques', link: '#equipe', cta: 'ver equipe' },
+{ nome: 'Viveiro', nomeLongo: 'Viveiro de mudas nativas e Banco de Sementes', tipo: 'produção', texto: 'As sementes vêm de árvores matrizes espalhadas pelo NEAS. Cada aluno que se forma na Uniso ganha uma muda daqui, e as mudas maiores vão para plantios na cidade. O viveiro também cultiva plantas para aulas, como medicinais, urtigas e carnívoras.', fatos: 'cerca de 1.000 mudas doadas por semestre aos formandos', link: '#visite', cta: 'agendar visita', img: 'img/viveiro-estufa.jpg', foto: 'Estufa do viveiro do NEAS' },
+{ nome: 'Museu', nomeLongo: 'Museu da Biodiversidade', tipo: 'coleção', texto: 'Usado nas aulas práticas de biologia e veterinária. Os animais são guardados em esqueleto, em taxidermia (o popular empalhado) e em meio líquido. Nenhum foi morto para isso: são bichos que sofreram acidentes ou foram encontrados no câmpus.', fatos: 'carpoteca com sementes de plantas nativas · parte do acervo veio da PUC', link: '#visite', cta: 'agendar visita', img: 'img/museu-acervo.jpg', foto: 'Estantes do acervo zoológico' }
+];
+const n = espacos.length;
+const raw = this.state && this.state.e;
+const sel = typeof raw === 'number' ? raw : 0;
+const est = (k) => ({ op: k === sel ? 1 : 0, oculto: k === sel ? 'false' : 'true' });
+const lista = espacos.map((e, k) => ({
+...e,
+num: String(k + 1).padStart(2, '0'),
+atual: k === sel ? 'true' : 'false',
+cor: k === sel ? '#F1EEE6' : '#93A698',
+seta: k === sel ? 1 : 0,
+fundo: k === sel ? '#F1EEE6' : 'transparent',
+corChip: k === sel ? '#1E3B27' : '#F1EEE6',
+borda: k === sel ? '#F1EEE6' : '#4F6B57',
+ir: () => this.setState({ e: k })
+}));
+const atual = { ...lista[sel], temImg: !!lista[sel].img };
+return {
+menuAberto: (this.state && this.state.menu) ? 'true' : 'false',
+alternarMenu: () => this.setState({ menu: !(this.state && this.state.menu) }),
+espacos: lista,
+atual,
+totalEspacos: String(n),
+e0: est(0), e1: est(1), e2: est(2), e3: est(3), e4: est(4),
+areas: [
+{ titulo: 'Pesquisa ambiental', texto: 'Estudos sobre o Rio Sorocaba, a qualidade da água e a fauna e a flora da região, ligados à graduação e à pós-graduação da Uniso.', foto: 'Foto: pesquisadores em campo' },
+{ titulo: 'Banco de Sementes', texto: 'Criado em 1999, cuida da colheita, do beneficiamento e da guarda de sementes de espécies nativas do interior paulista.', foto: 'Foto: sala de armazenagem de sementes' },
+{ titulo: 'Viveiro de mudas nativas', texto: 'Estufas com mudas de cerca de 50 espécies, usadas em reflorestamento, doações e programas sociais.', foto: 'Foto: estufas do viveiro' },
+{ titulo: 'Museu da Biodiversidade', texto: 'Coleção de peças zoológicas, carpoteca e herbário, usada em aulas, pesquisas e visitas de escolas.', foto: 'Estantes do acervo zoológico do Museu da Biodiversidade', img: 'img/museu-acervo.jpg' },
+{ titulo: 'Meliponário', texto: 'Colmeias de abelhas sem ferrão, como jataí e iraí, mantidas para pesquisa e educação ambiental.', foto: 'Foto: colmeias de abelhas sem ferrão' },
+{ titulo: 'Educação ambiental', texto: 'Trilha ecológica e visitas monitoradas para escolas e grupos da região.', foto: 'Foto: visita de escola na trilha' }
+].map((a) => ({ ...a, temImg: !!a.img, semImg: !a.img })),
+marcos: [
+{ ano: '1993', texto: 'O NEAS é criado em novembro, entre os primeiros núcleos de pesquisa da Uniso.' },
+{ ano: '1995', texto: 'O núcleo catalisa a instalação do Comitê de Bacias Hidrográficas dos Rios Sorocaba e Médio Tietê.' },
+{ ano: '1999', texto: 'Criação do Banco de Sementes, no compromisso de recuperar o terreno da Cidade Universitária.' },
+{ ano: '2002', texto: 'Plantio de mais de 1.600 mudas de 23 espécies no câmpus e clonagem da Árvore Grande.' },
+{ ano: '2009', texto: 'Com a SOS Mata Atlântica, 15 mil mudas de 80 espécies em 7,8 hectares.' },
+{ ano: '2010', texto: 'Segundo clone da Árvore Grande plantado na Avenida São Paulo.' },
+{ ano: '2022', texto: 'Inauguração do Museu da Biodiversidade e do meliponário, com plantas que atraem abelhas sem ferrão.' },
+{ ano: '2026', texto: 'Lançamento do livro A avifauna da Uniso, pela Eduniso.' }
+],
+noticias: [
+{ data: 'out. 2026', veiculo: 'Eduniso', titulo: 'A avifauna da Uniso: guia reúne as aves registradas na Cidade Universitária', link: 'https://editora.uniso.br/editora/catalog/book/72' },
+{ data: 'mar. 2026', veiculo: 'Diário de Tatuí', titulo: 'Semana da Água de Tatuí começa com visita técnica ao NEAS', link: 'https://www.diariodetatui.com/2026/03/tatui-realiza-semana-da-agua-com.html' },
+{ data: 'set. 2025', veiculo: 'Jornal Cruzeiro do Sul', titulo: 'Coordenador do NEAS explica avanço da leucena, espécie invasora, na Vila São João', link: 'https://www.jornalcruzeiro.com.br/sorocaba/noticias/2025/09/751990-leucena-infesta-regiao-da-vila-sao-joao-e-gera-reclamacoes.html' },
+{ data: 'ago. 2025', veiculo: 'Jornal Cruzeiro do Sul', titulo: 'Árvores históricas de Sorocaba e o clone da Árvore Grande', link: 'https://www.jornalcruzeiro.com.br/sorocaba/noticias/2025/08/750930-arvores-historicas.html' },
+{ data: 'nov. 2023', veiculo: 'Uniso Ciência / Cruzeiro do Sul', titulo: 'Interação entre besouros e pseudoescorpiões é registrada pela primeira vez no Sudeste, no NEAS', link: 'https://www.jornalcruzeiro.com.br/suplementos/uniso-ciencia/2023/11/725021-interacao-entre-especies-e-registrada-pela-primeira-vez-no-sudeste.html' },
+{ data: 'fev. 2023', veiculo: 'Uniso Ciência / Cruzeiro do Sul', titulo: 'Uniso inaugura o novo Museu da Biodiversidade, na área do NEAS', link: 'https://www.jornalcruzeiro.com.br/suplementos/uniso-ciencia/2023/02/710121-uniso-inaugura-novo-museu-da-biodiversidade.html' }
+],
+equipe: [
+{ nome: 'Nobel Penteado de Freitas', funcao: 'Professor titular, coordenador do NEAS' },
+{ nome: 'Thiago Simon Marques', funcao: 'Coordenador do Laboratório de Ecologia Aplicada' },
+{ nome: 'Heitor Zochio Fischer', funcao: 'Professor de Ciências Biológicas, meliponário' },
+{ nome: 'Cris', funcao: '[função no NEAS]' },
+{ nome: 'Jair', funcao: '[função no NEAS]' }
+]
+};
+}
+}
+window.NEASComponent = Component;
+</script>
+</body>
+</html>

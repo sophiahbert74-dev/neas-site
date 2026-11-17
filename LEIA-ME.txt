@@ -1,0 +1,12 @@
+Site do NEAS — Núcleo de Estudos Ambientais da Uniso
+
+Como publicar
+- Suba a pasta inteira (não só o index.html): as páginas usam as pastas img/ e js/.
+- index.html é a página inicial. As outras são historia.html e arvore-grande.html.
+- Funciona em qualquer hospedagem de site estático (Netlify, GitHub Pages, Vercel, Cloudflare Pages).
+
+Para trocar uma foto
+- Substitua o arquivo dentro de img/ mantendo o mesmo nome.
+
+Pendências marcadas no texto
+- Trechos entre colchetes, como [crédito da foto] ou [confirmar], ainda precisam ser preenchidos.
